@@ -1,8 +1,22 @@
 {
   "name": "soothingcoding",
   "scripts": {},
-  "env": {},
-  "formation": {},
-  "addons": [],
-  "buildpacks": []
+  "env": {
+    "ALLOWED_HOSTS": {
+      "required": true
+    },
+    "DEBUG": true,
+    "STATICFILES_STORAGE": "django.contrib.staticfiles.storage.ManifestStaticFilesStorage"
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [{
+    "url": "heroku/python"
+  }]
 }

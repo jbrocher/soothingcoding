@@ -5,8 +5,12 @@
     "ALLOWED_HOSTS": {
       "required": true
     },
-    "DEBUG": true,
-    "STATICFILES_STORAGE": "django.contrib.staticfiles.storage.ManifestStaticFilesStorage"
+    "DEBUG": {
+      "value": false
+    },
+    "STATICFILES_STORAGE": {
+      "value": "django.contrib.staticfiles.storage.ManifestStaticFilesStorage"
+    }
   },
   "formation": {
     "web": {

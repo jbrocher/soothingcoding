@@ -9,9 +9,13 @@
 .value-proposition .btn-primary{
   background-color: #99D3DF;
   border-color: #99D3DF;
-
 }
 
 .value-proposition hr{
   border-color: #99D3DF;
+}
+
+.value-proposition .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+  color: #fff;
+  background-color: #88BBD6;
 }

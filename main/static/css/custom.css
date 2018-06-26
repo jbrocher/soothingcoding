@@ -1,0 +1,17 @@
+/* General customization*/
+
+.text-primary-custom {
+  color: #99D3DF;
+}
+
+/* value proposition */
+
+.value-proposition .btn-primary{
+  background-color: #99D3DF;
+  border-color: #99D3DF;
+
+}
+
+.value-proposition hr{
+  border-color: #99D3DF;
+}

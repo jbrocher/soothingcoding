@@ -1,41 +1,53 @@
 {% load cms_tags menu_tags sekizai_tags %}
+{% load static %}
 <!doctype html>
 <html>
     <head>
         <title>{% block title %}This is my new project home page{% endblock title %}</title>
-        <meta name="viewport" content="width=device-width,initial-scale=1">
-        <style type="text/css">
-            .nav {
-                padding-left: 0;
-            }
-            .nav li {
-                display: inline;
-                list-style-type: none;
-                padding-right: 20px;
-            }
-            .container {
-                width: 940px;
-                margin: 0 auto
-            }
-            .content {
-                float: left;
-                width: 80%;
-            }
-            .sidebar {
-                float: left;
-                width: 20%;
-            }
-        </style>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Creative - Start Bootstrap Theme</title>
+
+        <!-- Bootstrap core CSS -->
+        <link href="{% static "vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
+
+        <!-- Custom fonts for this template -->
+        <link href="{% static "vendor/font-awesome/css/font-awesome.min.css" %}" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+        <!-- Plugin CSS -->
+        <link href="{% static "vendor/magnific-popup/magnific-popup.css" %}" rel="stylesheet">
+
+        <!-- Custom styles for this template -->
+        <link href="{% static "css/creative.css" %}" rel="stylesheet">
+        <link href="{% static "css/custom.css" %}" rel="stylesheet">
+
         {% render_block "css" %}
     </head>
-    <body>
+    <body id="page-top">
         {% cms_toolbar %}
         <div class="container">
             <ul class="nav">
                 {% show_menu 0 100 100 100 %}
             </ul>
-            {% block content %}{% endblock content %}
         </div>
+          {% block content %}{% endblock content %}
         {% render_block "js" %}
+        <!-- Bootstrap core JavaScript -->
+        <script src="{% static "vendor/jquery/jquery.min.js" %}"></script>
+        <script src="{% static "vendor/bootstrap/js/bootstrap.bundle.min.js" %}"></script>
+
+        <!-- Plugin JavaScript -->
+        <script src="{% static "vendor/jquery-easing/jquery.easing.min.js" %}"></script>
+        <script src="{% static "vendor/scrollreveal/scrollreveal.min.js" %}"></script>
+        <script src="{% static "vendor/magnific-popup/jquery.magnific-popup.min.js" %}"></script>
+
+        <!-- Custom scripts for this template -->
+        <script src="{% static "js/creative.min.js" %}"></script>
     </body>
 </html>

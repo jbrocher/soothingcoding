@@ -2,11 +2,8 @@
   "name": "soothingcoding",
   "scripts": {},
   "env": {
-    "ALLOWED_HOSTS": {
-      "required": true
-    },
     "DEBUG": {
-      "value": false
+      "value": "false"
     },
     "STATICFILES_STORAGE": {
       "value": "django.contrib.staticfiles.storage.ManifestStaticFilesStorage"

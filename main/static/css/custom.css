@@ -22,3 +22,18 @@
 .value-proposition .btn-primary:active, .btn-primary:focus {
   box-shadow: 0 0 0 0.2rem rgba(205, 205, 205, 1) ;
 }
+
+/*services*/
+
+.services {
+  background-color: #E9E9E9;
+}
+
+.services .card{
+  background-color: white;
+  border:0px;
+}
+.services .card-footer {
+  border: 0px;
+  background-color: white;
+}

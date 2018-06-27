@@ -4,22 +4,38 @@
   color: #99D3DF;
 }
 
-/* value proposition */
-
-.value-proposition .btn-primary{
+.btn-primary{
   background-color: #99D3DF;
   border-color: #99D3DF;
 }
 
-.value-proposition hr{
-  border-color: #99D3DF;
-}
-
-.value-proposition .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   color: #fff;
   background-color: #88BBD6;
 }
 
 .value-proposition .btn-primary:active, .btn-primary:focus {
   box-shadow: 0 0 0 0.2rem rgba(205, 205, 205, 1) ;
+}
+
+
+/*value-proposition*/
+.value-proposition hr{
+  border-color: #99D3DF;
+}
+
+
+/*services*/
+
+.services {
+  background-color: #E9E9E9;
+}
+
+.services .card{
+  background-color: white;
+  border:0px;
+}
+.services .card-footer {
+  border: 0px;
+  background-color: white;
 }

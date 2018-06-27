@@ -9,12 +9,7 @@
   border-color: #99D3DF;
 }
 
-/*value-proposition*/
-.value-proposition hr{
-  border-color: #99D3DF;
-}
-
-.value-proposition .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   color: #fff;
   background-color: #88BBD6;
 }
@@ -23,6 +18,11 @@
   box-shadow: 0 0 0 0.2rem rgba(205, 205, 205, 1) ;
 }
 
+
+/*value-proposition*/
+.value-proposition hr{
+  border-color: #99D3DF;
+}
 /*services*/
 
 .services {

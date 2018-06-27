@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load cms_tags %}
-
+{% load static %}
 {% block content %}
 <header class="masthead text-center text-white d-flex value-proposition">
   <div class="container my-auto">
@@ -12,37 +12,88 @@
         <hr>
       </div>
       <div class="col">
-          <p class="text-faded mb-5">	Entre une idée et un site web il n'y a qu'un pas</p>
-          <p class="text-faded mb-5">	Soothing coding vous aide à le franchir sereinement</p>
+        <p class="text-faded mb-5"> Entre une idée et un site web il n'y a qu'un pas</p>
+        <p class="text-faded mb-5"> Soothing coding vous aide à le franchir sereinement</p>
         <div class="row mt-5 justify-content-center">
           <div class="col-md-6 col-lg-4">
             <a class="btn btn-primary btn-block btn-xl js-scroll-trigger" href="#about">Je veux lancer mon projet !</a>
           </div>
         </div>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col mx-4 text-center">
+          <div class="service-box mt-5 mx-auto">
+            <i class="fa fa-4x fa-pencil text-primary-custom mb-3 sr-icons"></i>
+            <h3 class="mb-3">Conception</h3>
+            <p class="mb-0">Nous vous accompagnons dans l'expression de votre besoin</p>
+          </div>
+        </div>
+        <div class=" mx-4 col text-center">
+          <div class="service-box mt-5 mx-auto">
+            <i class="fa fa-4x fa-code text-primary-custom mb-3 sr-icons"></i>
+            <h3 class="mb-3">Réalisation</h3>
+            <p class="mb-0">Développement de votre site à l'aide des technologies les plus récentes</p>
+          </div>
+        </div>
+        <div class="mx-4 col text-center">
+          <div class="service-box mt-5 mx-auto">
+            <i class="fa fa-4x fa-laptop text-primary-custom mb-3 sr-icons"></i>
+            <h3 class="mb-3">Formation</h3>
+            <p class="mb-0">Restez maîtres de votre projet</p>
+          </div>
+        </div>
+    </div>
+  </div>
+</header>
+<section class="services">
+  <div class="row">
+    <div class="col card-group">
+      <div class="card services__show-case">
+        <img class="card-img-top" src="{% static "img/portfolio/fullsize/1.jpg" %}" alt="Site Vitrine">
+        <div class="card-body">
+          <h3 class="card-title">Site vitrine</h3>
+          <p class="card-text">Idéal pour mettre en avant un produit ou un service !</p>
+        </div>
+        <div class="card-footer">
+          <a href="#" class="btn btn-primary">En savoir plus</a>
+        </div>
+      </div>
+      <div class="card services__e-commerce">
+        <img class="card-img-top" src="{% static "img/portfolio/fullsize/2.jpg" %}" alt="Site Vitrine">
+        <div class="card-body">
+          <h3 class="card-title">E-commerce</h3>
+          <p class="card-text">Permettre à vos clients de profiter de vos services chez eux, 24h sur 24</p>
+        </div>
+        <div class="card-footer">
+          <a href="#" class="btn btn-primary">En savoir plus</a>
+        </div>
+      </div>
     </div>
   </div>
   <div class="row">
-      <div class="col mx-4 text-center">
-        <div class="service-box mt-5 mx-auto">
-          <i class="fa fa-4x fa-pencil text-primary-custom mb-3 sr-icons"></i>
-          <h3 class="mb-3">Conception</h3>
-          <p class="mb-0">Nous vous accompagnons dans l'expression de votre besoin</p>
+    <div class="col card-group">
+      <div class="card services__show-case">
+        <img class="card-img-top" src="{% static "img/portfolio/fullsize/3.jpg" %}" alt="Site Vitrine">
+        <div class="card-body">
+          <h3 class="card-title">Maintenance</h3>
+          <p class="card-text">Réparer et améliorer votre site !</p>
+        </div>
+        <div class="card-footer">
+          <a href="#" class="btn btn-primary">En savoir plus</a>
         </div>
       </div>
-      <div class=" mx-4 col text-center">
-        <div class="service-box mt-5 mx-auto">
-          <i class="fa fa-4x fa-code text-primary-custom mb-3 sr-icons"></i>
-          <h3 class="mb-3">Réalisation</h3>
-          <p class="mb-0">Développement de votre site à l'aide des technologies les plus récentes</p>
+      <div class="card services__e-commerce">
+        <img class="card-img-top" src="{% static "img/portfolio/fullsize/4.jpg" %}" alt="Site Vitrine">
+        <div class="card-body">
+          <h5 class="card-title">SEO</h5>
+          <p class="card-text">Boostez votre présence sur le web grâce à nos audits SEO</p>
         </div>
-      </div>
-      <div class="mx-4 col text-center">
-        <div class="service-box mt-5 mx-auto">
-          <i class="fa fa-4x fa-laptop text-primary-custom mb-3 sr-icons"></i>
-          <h3 class="mb-3">Formation</h3>
-          <p class="mb-0">Restez maîtres de votre projet</p>
+        <div class="card-footer">
+          <a href="#" class="btn btn-primary">En savoir plus</a>
         </div>
       </div>
   </div>
-</header>
+</div>
+</section>
 {% endblock %}

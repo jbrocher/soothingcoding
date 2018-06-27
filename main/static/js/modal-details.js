@@ -13,7 +13,6 @@ var ModalDetails = (function () {
         modal.find('.modal-details__tech').text(list.tech)
         modal.find('.modal-details__time').text(list.time)
         modal.find('.modal-details__cost').text(list.cost)
-
       })
     }
   }

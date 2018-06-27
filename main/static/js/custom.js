@@ -1,0 +1,1 @@
+ModalDetails.init()

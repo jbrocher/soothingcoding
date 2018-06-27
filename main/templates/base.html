@@ -31,12 +31,12 @@
     </head>
     <body id="page-top">
         {% cms_toolbar %}
-        <div class="container">
+        <div class="container-fluid">
             <ul class="nav">
                 {% show_menu 0 100 100 100 %}
             </ul>
+              {% block content %}{% endblock content %}
         </div>
-          {% block content %}{% endblock content %}
         {% render_block "js" %}
         <!-- Bootstrap core JavaScript -->
         <script src="{% static "vendor/jquery/jquery.min.js" %}"></script>

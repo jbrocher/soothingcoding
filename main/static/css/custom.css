@@ -1,5 +1,4 @@
 /* General customization*/
-
 .text-primary-custom {
   color: #99D3DF;
 }
@@ -38,4 +37,30 @@
 .services .card-footer {
   border: 0px;
   background-color: white;
+}
+
+/* menu-general */
+
+.menu-general__link{
+  color: #99D3DF;
+}
+.menu-general .nav-item:hover {
+  background-color: #CDCDCDCD
+
+}
+
+.menu-general__btn{
+  border-color: #99D3DF;
+  color: #99D3DF;
+  text-transform: none;
+}
+
+.menu-general__btn:hover, .menu-general__btn:focus, .menu-general__btn:active {
+  color: white;
+  background-color: #99D3DF;
+}
+
+.menu-general__btn:active, .menu-general__btn:focus {
+  color:white
+  box-shadow: 0 0 0 0.2rem rgba(153, 211, 223, 1) ;
 }

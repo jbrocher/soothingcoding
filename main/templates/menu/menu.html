@@ -1,0 +1,23 @@
+{% load menu_tags %}
+
+  <nav class="menu-general bg-light fixed-top navbar navbar-expand-md navbar-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menu-general__collapse" aria-controls="menu-general__collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+      <a class="navbar-brand" href="#">Soothing Coding</a>
+      <div class="collapse navbar-collapse mr-auto" id="menu-general__collapse">
+          <ul class="navbar-nav">
+          {% for child in children %}
+              <li class="nav-item {% if child.selected %}selected{% endif %}{% if child.ancestor %}ancestor{% endif %}{% if child.sibling %}sibling{% endif %}{% if child.descendant %}descendant{% endif %}">
+                <a class="nav-link menu-general__link" href="{{ child.get_absolute_url }}">{{ child.get_menu_title }}</a>
+                {% if child.children %}
+                  {% show_menu from_level to_level extra_inactive extra_active template "" "" child %}
+                {% endif %}
+              </li>
+          {% endfor %}
+          <li>
+              <a href="#" class="menu-general__btn btn btn-outline-primary">En savoir plus</a>
+          </li>
+        </ul>
+      </div>
+  </nav>

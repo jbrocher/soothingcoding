@@ -40,6 +40,14 @@
 .menu-general__link{
   color: #99D3DF;
 }
+
+.menu_general__navbar-brand{
+  border-right: solid 1px;
+
+}
+.menu-general--border{
+  border-right: solid 1px;
+}
 .menu-general .nav-item:hover :not(.menu-general__btn ) {
   color: #b1b1b1 ;
 
@@ -52,6 +60,9 @@
   text-transform: none;
 }
 
+.menu-general{
+  min-height: 10%;
+}
 .menu-general__btn:hover, .menu-general__btn:focus, .menu-general__btn:active {
   color: white;
   border:none;

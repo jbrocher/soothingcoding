@@ -3,15 +3,12 @@
 <!doctype html>
 <html>
     <head>
-        <title>{% block title %}This is my new project home page{% endblock title %}</title>
+        <title>{% block title %}Soothing Coding{% endblock title %}</title>
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-
-        <title>Creative - Start Bootstrap Theme</title>
-
         <!-- Bootstrap core CSS -->
         <link href="{% static "vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
 
@@ -29,13 +26,12 @@
 
         {% render_block "css" %}
     </head>
-    <body id="page-top">
+    <body class="bg-light" id="page-top">
         {% cms_toolbar %}
         <div class="container-fluid">
-            <ul class="nav">
-                {% show_menu 0 100 100 100 %}
-            </ul>
-              {% block content %}{% endblock content %}
+          {% show_menu 0 100 100 100 "menu/menu.html"%}
+          {% block content %}
+          {% endblock content %}
         </div>
         {% render_block "js" %}
         <!-- Bootstrap core JavaScript -->

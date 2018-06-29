@@ -29,11 +29,17 @@
 .services .card{
   background-color: white;
   border:0px;
+  margin-bottom: 1em;
 }
 .services .card-footer {
   border: 0px;
   background-color: white;
 }
+
+.services h1, h2, h3 {
+  color: #7e7e7e;
+}
+
 
 /* menu-general */
 

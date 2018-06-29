@@ -46,13 +46,15 @@
 }
 
 .menu-general__btn{
-  border-color: #99D3DF;
   color: #99D3DF;
+  border: solid 1px;
+  border-color: #99D3DF;
   text-transform: none;
 }
 
 .menu-general__btn:hover, .menu-general__btn:focus, .menu-general__btn:active {
   color: white;
+  border:none;
   background-color: #99D3DF;
 }
 

@@ -52,6 +52,9 @@
   text-transform: none;
 }
 
+.menu-general{
+  min-height: 10%;
+}
 .menu-general__btn:hover, .menu-general__btn:focus, .menu-general__btn:active {
   color: white;
   border:none;

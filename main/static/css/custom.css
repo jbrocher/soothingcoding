@@ -40,8 +40,8 @@
 .menu-general__link{
   color: #99D3DF;
 }
-.menu-general .nav-item:hover {
-  background-color: #CDCDCDCD
+.menu-general .nav-item:hover :not(.menu-general__btn ) {
+  color: #b1b1b1 ;
 
 }
 

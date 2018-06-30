@@ -26,6 +26,10 @@
 
 /*services*/
 
+
+.services hr {
+  border-color: #99D3DF;
+}
 .services .card{
   background-color: white;
   border:0px;

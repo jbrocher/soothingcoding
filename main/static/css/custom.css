@@ -17,6 +17,12 @@
   box-shadow: 0 0 0 0.2rem rgba(205, 205, 205, 1) ;
 }
 
+.parallax-window {
+    background: transparent;
+}
+section {
+  padding : 4rem 0;
+}
 
 /*value-proposition*/
 .value-proposition hr{

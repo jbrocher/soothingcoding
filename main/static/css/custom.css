@@ -89,3 +89,20 @@ section {
   color:white
   box-shadow: 0 0 0 0.2rem rgba(153, 211, 223, 1) ;
 }
+
+/* articles */
+
+.articles {
+  padding-top: 0em;;
+}
+.articles__title hr {
+  border-color: #99D3DF;
+}
+
+.article {
+  margin-left: -15px;
+  margin-right: -15px;
+  background-color: #fff;
+  border-right: solid 2px;
+  border-color: #b1b1b1
+}

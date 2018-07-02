@@ -8,9 +8,9 @@ from django.contrib.auth.admin import User
 
 def create_superuser(apps, schema_editor):
 
-    if schema_editor.connection.alias != 'dev6gi28djtjfd':
+    if schema_editor.connection.alias == 'dev6gi28djtjfd':
         return
-    
+
     superuser = User()
     superuser.is_active = True
     superuser.is_superuser = True

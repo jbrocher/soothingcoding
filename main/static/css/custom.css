@@ -17,6 +17,13 @@
   box-shadow: 0 0 0 0.2rem rgba(205, 205, 205, 1) ;
 }
 
+.parallax-window {
+    background: transparent;
+}
+section {
+  padding : 4rem 0;
+}
+
 /*value-proposition*/
 .value-proposition hr{
   border-color: #99D3DF;
@@ -25,14 +32,24 @@
 
 /*services*/
 
+
+.services hr {
+  border-color: #99D3DF;
+}
 .services .card{
   background-color: white;
   border:0px;
+  margin-bottom: 1em;
 }
 .services .card-footer {
   border: 0px;
   background-color: white;
 }
+
+.services h1, h2, h3 {
+  color: #7e7e7e;
+}
+
 
 /* menu-general */
 

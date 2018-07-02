@@ -148,25 +148,49 @@
 </div>
 </section>
 <section class="articles">
-  <div class="container-fluid">
-    <div class="row justify-content-center articles__title">
-      <div class="col-auto">
-        <h2>Comment ça marche ?</h2>
-        <hr>
-      </div>
+  <div class="row justify-content-center articles__title">
+    <div class="col-auto">
+      <h2>Comment ça marche ?</h2>
+      <hr>
     </div>
-    <div class="row">
-      <div class="col">
-        <div data-aos="fade-right" class="row article">
-          <div class="media">
-            <img class="mr-3 w-25" src="{% static 'img/project-management.jpg' %}" alt="Generic placeholder image">
-            <div class="media-body">
-              <h3 class="mt-0">Méthodologie</h3>
-              Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              <a href="#">En savoir plus ...</a>
+  </div>
+  <div class="row articles__article-list">
+    <div class="col">
+      <div data-aos="fade-right" class="row article">
+        <div class="col-3">
+            <img class="mr-3 w-100" src="{% static 'img/project-management.jpg' %}" alt="Generic placeholder image">
+        </div>
+        <div class="w-100 d-sm-none"></div>
+        <div  class="col">
+            <div class="row article_summary">
+              <div class="col">
+                <h3 class="mt-0">Méthodologie</h3>
+Les projets digitaux font intervenir un très grand nombre d'éléments différents qui doivent intéragir ensemble pour générer les pages servies aux utilisateurs. Cette complexité nécessite une gestoin de projet capable de s'adapter en cours de projets à d'éventuelle modification, et de produire régulièrement des éléments apportant un valeur ajoutée réelle au projet.C'est pourquoi les méthodes agiles ont été créée. Chez Soothing Coding nous avons choisi la méthode Scrum qui garantie :                </div>
             </div>
-          </div>
+            <div class="row article__content">
+              <div class="col col-sm-8">
+                <ul class="mt-4 list-group list-group-flush">
+                  <li class="list-group-item">
+                    <i class="fas fa-xs mr-4 fa-clock text-primary-custom"></i>
+                    Une estimation précise de la durée de dédevelopment
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fa fa-xs mr-4 fa-code text-primary-custom"></i>
+                    Un livrable qui correspond parfaitement aux attentes du clients
+                  </li>
+                  <li class="list-group-item">
+                    <i class="fas fa-xs mr-4 fa-boxes text-primary-custom"></i>
+                    Un ajout régulier de feature 100% fonctionnelles
+                  </li>
+                </ul>
+              </div>
+              <div class="w-100 d-sm-none">
+
+              </div>
+              <div class="col col-sm-4 text-center my-auto">
+                <a class="btn btn-primary" href="#">Tout savoir sur SCRUM</a>
+              </div>
+            </div>
         </div>
       </div>
     </div>

@@ -99,9 +99,7 @@ section {
   border-color: #99D3DF;
 }
 
-.article {
-  margin-left: -15px;
-  margin-right: -15px;
+.article > .col {
   background-color: #fff;
   border-right: solid 2px;
   border-color: #b1b1b1

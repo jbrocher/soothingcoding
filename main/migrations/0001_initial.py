@@ -15,6 +15,7 @@ def create_superuser(apps, schema_editor):
     superuser.is_active = True
     superuser.is_superuser = True
     superuser.is_staff = True
+    superuser.is_superuser = True
     superuser.username = 'soohtingcoding'
     superuser.email = 'admin@admin.net'
     superuser.set_password('soothingcoding')

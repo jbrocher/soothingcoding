@@ -1,7 +1,12 @@
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, JsonResponse
 from django.shortcuts import render
 
 from contact_form.forms import PotentialForm
+
+
+def contact_form(request):
+    form = PotentialForm()
+    return render(request, 'contact_form/form.html', {'form': form})
 
 
 def new_potential(request):
@@ -15,10 +20,5 @@ def new_potential(request):
             # ...
             # redirect to a new URL:
             form.save()
-            return HttpResponseRedirect('/')
 
-    # if a GET (or any other method) we'll create a blank form
-    else:
-        form = PotentialForm()
-
-    return render(request, 'contact_form/form.html', {'form': form})
+    return JsonResponse({'foo': 'bar'})

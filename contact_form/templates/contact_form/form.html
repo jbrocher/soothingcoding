@@ -1,10 +1,9 @@
 {% extends "contact_form/base.html" %}
-
 {% block content %}
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-6">
-      <form action="/contactform/" method="post">
+      <form class="contact-form" id="contactForm" action="{% url 'contact_form:new_potential' %}" method="post">
         {% csrf_token %}
 
         <div class="row">
@@ -51,12 +50,11 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-4">
-            <input type="submit" class="btn btn-block btn-primary" value="Submit" />
+            <input type="submit" id="contactFormSubmit" class="btn btn-block btn-primary" value="Submit" />
           </div>
         </div>
       </form>
     </div>
   </div>
 </div>
-
 {% endblock %}

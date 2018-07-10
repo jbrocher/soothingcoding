@@ -20,6 +20,11 @@ function getCookie (name) {
 
 // this is the id of the form
 $(document).ready(function () {
+  $('.contact-form__btn').on('click', function () {
+    var relatedInputId = $(this).attr('for')
+    $('#' + relatedInputId).prop('checked', true)
+
+  })
   $('#contactForm').submit(function (e) {
     e.preventDefault() // avoid to execute the actual submit of the form.
 

@@ -1,0 +1,82 @@
+{% load sekizai_tags %}
+{% load static %}
+
+{% addtoblock "js" %}<script src="{% static 'contact_form/contact-form.js' %}" charset="utf-8"></script>{% endaddtoblock %}
+<form class="contact-form bg-white p-2 border rounded" id="contactForm" action="{% url 'contact_form:new_potential' %}" method="post">
+  {% csrf_token %}
+
+  <div class="row">
+    <div class="col py-2">
+      <h2 class="mb-3 text-center">Votre projet</h2>
+      <div class="form-group my-3">
+        <label class="mb-3 d-block" for="{{ form.project_type.id_for_label }}">Pour commencer, choisissez un type de projet :</label>
+        <div data-toggle="buttons" class="btn-group btn-group-toggle"  id="{{ form.project_type.id_for_label }}" role="group" aria-label="Project Type">
+          {% for radio in form.project_type %}
+            <label class="btn m-2 contact-form__btn btn-primary" for="{{ radio.id_for_label }}">
+              {{ radio.tag }}{{ radio.choice_label }}
+            </label>
+          {% endfor %}
+          {{ form.project_type.errors }}
+        </div>
+      </div>
+      <div class="form-group">
+        {{ form.project_desc.errors }}
+        <label for="{{ form.project_desc.id_for_label }}">Description de votre projet</label>
+        {{ form.project_desc }}
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col py-3">
+      <h2 class="mb-3 text-center">information de contact</h2>
+      <div class="form-group">
+        {{ form.contact_name.errors }}
+        <label for="{{ form.contact_name.id_for_label }}">Nom du contact</label>
+        {{ form.contact_name }}
+      </div>
+      <div class="form-group">
+        {{ form.contact_email.errors }}
+        <label for="{{ form.contact_email.id_for_label }}">Mail de contact</label>
+        {{ form.contact_email }}
+      </div>
+      <div class="form-group">
+        {{ form.contact_company.errors }}
+        <label for="{{ form.contact_company.id_for_label }}">Nom de l'entreprise</label>
+        {{ form.contact_company }}
+      </div>
+      <div class="form-group">
+        {{ form.contact_desc.errors }}
+        <label for="{{ form.contact_desc.id_for_label }}">Description de votre activité</label>
+        {{ form.contact_desc }}
+      </div>
+    </div>
+
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-4">
+      <input type="submit" id="contactFormSubmit" class="btn btn-block btn-primary" value="Submit" />
+    </div>
+  </div>
+</form>
+<!-- Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="succesModalTitle">Première étape franchie !</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h3 class="text-center">Féliciations vous avez franchie la toute première étape de votre projet !</h3>
+        <p>Votre demande de projet a bien été prise en compte, et un mail de confirmation vous a été envoyé à l'adresse mail renseignée dans le formulaire. Ce mail contient également un résumé des prochaines étapes et une checklist "Project kickoff". Soothing Coding reviens vers vous dans les plus bref délais pour la suite !</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

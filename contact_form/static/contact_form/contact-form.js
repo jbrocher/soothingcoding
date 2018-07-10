@@ -27,14 +27,15 @@ $(document).ready(function () {
     var form = $(this)
     var url = form.attr('action') // the script where you handle the form input.
     var data = $('#contactForm').serialize()
-    data['csrftoken']
     $.ajax({
       type: 'POST',
       url: url,
-      headers : {'X-CSRFToken': csrftoken},
+      headers: {'X-CSRFToken': csrftoken},
       data: data, // serializes the form's elements.
       success: function (data) {
-        alert(data) // show response from the php script.
+        $('#successModal').modal({
+          keyboard: false
+        })
       }
     })
   })

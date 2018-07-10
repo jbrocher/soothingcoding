@@ -20,5 +20,8 @@ def new_potential(request):
             # ...
             # redirect to a new URL:
             form.save()
-
-    return JsonResponse({'foo': 'bar'})
+            return JsonResponse({'satus': 'success'})
+        else:
+            response = dict(form.errors)
+            response['status'] = 400
+            return JsonResponse(form.errors)

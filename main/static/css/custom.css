@@ -24,18 +24,14 @@ section {
   padding : 4rem 0;
 }
 
-/*value-proposition*/
-.value-proposition hr{
-  border-color: #99D3DF;
+hr {
+ border-color: #99D3DF;
 }
+
 
 
 /*services*/
 
-
-.services hr {
-  border-color: #99D3DF;
-}
 .services .card{
   background-color: white;
   border:0px;
@@ -95,12 +91,23 @@ section {
 .articles {
   padding-top: 0em;;
 }
-.articles__title hr {
-  border-color: #99D3DF;
-}
-
 .article > .col {
   background-color: #fff;
   border-right: solid 2px;
   border-color: #b1b1b1
+}
+
+
+/* contact form */
+.contact-form__btn{
+  border-radius: 0px;
+  font-weight: 700;
+}
+
+.contact-form__btn .active {
+  color: #fff;
+  background-color: #88BBD6;
+}
+.contact-form__btn .active, .contact-form__btn .focus{
+  box-shadow: 0 0 0 0.2rem rgba(205, 205, 205, 1) ;
 }

@@ -102,6 +102,7 @@ hr {
 .contact-form__btn{
   border-radius: 0px;
   font-weight: 700;
+  font-size: small;
 }
 
 .contact-form__btn .active {
@@ -110,4 +111,10 @@ hr {
 }
 .contact-form__btn .active, .contact-form__btn .focus{
   box-shadow: 0 0 0 0.2rem rgba(205, 205, 205, 1) ;
+}
+
+@media screen and (min-width: 480px) {
+  .contact-form__btn {
+    font-size: medium;
+  }
 }

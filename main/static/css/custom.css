@@ -8,6 +8,15 @@
   border-color: #99D3DF;
 }
 
+a {
+  color: #99D3DF;
+
+}
+
+a:hover {
+  color: #88BBD6;
+}
+
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   color: #fff;
   background-color: #88BBD6;
@@ -135,6 +144,5 @@ hr {
 }
 
 .contact-information {
-  font-size: 0.9em;
   color: #b1b1b1;
 }

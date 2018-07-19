@@ -126,3 +126,15 @@ hr {
     font-size: medium;
   }
 }
+
+/* Contact information */
+
+.contact-information__illustration {
+  background-size:cover;
+  opacity: 0.5;
+}
+
+.contact-information {
+  font-size: 0.9em;
+  color: #b1b1b1;
+}

@@ -45,3 +45,7 @@ $(document).ready(function () {
     })
   })
 })
+
+
+//activating the tooltips :
+$('i').tooltip()

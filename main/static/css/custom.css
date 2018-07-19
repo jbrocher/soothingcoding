@@ -28,7 +28,15 @@ hr {
  border-color: #99D3DF;
 }
 
+.tooltip-inner {
+  background-color: #f8f9fa;
+  color: #88BBD6;
+  opacity: 1.0;
+}
 
+.tooltip {
+  opacity : 1 !important;
+}
 
 /*services*/
 

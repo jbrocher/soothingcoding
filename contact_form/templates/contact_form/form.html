@@ -1,0 +1,60 @@
+{% extends "contact_form/base.html" %}
+{% block content %}
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <form class="contact-form" id="contactForm" action="{% url 'contact_form:new_potential' %}" method="post">
+        {% csrf_token %}
+
+        <div class="row">
+          <div class="col">
+            <h2>Votre projet</h2>
+            <div class="form-group">
+              {{ form.project_type.errors }}
+              <label for="{{ form.project_type.id_for_label }}">Type de projet</label>
+              {{ form.project_type }}
+            </div>
+            <div class="form-group">
+              {{ form.project_desc.errors }}
+              <label for="{{ form.project_desc.id_for_label }}">Description de votre projet</label>
+              {{ form.project_desc }}
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <h2>information de contact</h2>
+            <div class="form-group">
+              {{ form.contact_name.errors }}
+              <label for="{{ form.contact_name.id_for_label }}">Nom du contact</label>
+              {{ form.contact_name }}
+            </div>
+            <div class="form-group">
+              {{ form.contact_email.errors }}
+              <label for="{{ form.contact_email.id_for_label }}">Mail de contact</label>
+              {{ form.contact_email }}
+            </div>
+            <div class="form-group">
+              {{ form.contact_company.errors }}
+              <label for="{{ form.contact_company.id_for_label }}">Nom de l'entreprise</label>
+              {{ form.contact_company }}
+            </div>
+            <div class="form-group">
+              {{ form.contact_desc.errors }}
+              <label for="{{ form.contact_desc.id_for_label }}">Description de votre activité</label>
+              {{ form.contact_desc }}
+            </div>
+          </div>
+
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-4">
+            <input type="submit" id="contactFormSubmit" class="btn btn-block btn-primary" value="Submit" />
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

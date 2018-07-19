@@ -34,7 +34,6 @@
           {% block content %}
           {% endblock content %}
         </div>
-        {% render_block "js" %}
         <!-- Bootstrap core JavaScript -->
         <script src="{% static "vendor/jquery/jquery.min.js" %}"></script>
         <script src="{% static "vendor/bootstrap/js/bootstrap.bundle.min.js" %}"></script>
@@ -51,6 +50,8 @@
         <script src="{% static "js/modal-details.js" %}"></script>
         <script src="{% static "js/parallax.js" %}"></script>
         <script src="{% static "js/custom.js" %}"></script>
+        {% render_block "js" %}
+        
 
     </body>
 </html>

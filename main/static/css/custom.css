@@ -8,6 +8,15 @@
   border-color: #99D3DF;
 }
 
+a {
+  color: #99D3DF;
+
+}
+
+a:hover {
+  color: #88BBD6;
+}
+
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   color: #fff;
   background-color: #88BBD6;
@@ -125,4 +134,15 @@ hr {
   .contact-form__btn {
     font-size: medium;
   }
+}
+
+/* Contact information */
+
+.contact-information__illustration {
+  background-size:cover;
+  opacity: 0.5;
+}
+
+.contact-information {
+  color: #b1b1b1;
 }

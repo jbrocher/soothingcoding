@@ -33,8 +33,7 @@
       </div>
     </div>
   </div>
-
-  <div class="row">
+  <div class="row collapse" id="contact-form__contact-info">
     <div class="col py-3">
       <h2 class="mb-3 text-center">information de contact</h2>
       <div class="form-group">
@@ -61,12 +60,17 @@
         <label for="{{ form.contact_desc.id_for_label }}">Description de votre activité</label>
         {{ form.contact_desc }}
       </div>
+      <div class="row justify-content-center">
+        <div class="col-4">
+          <input type="submit" id="contactFormSubmit" class="btn btn-block btn-primary" value="Submit" />
+        </div>
+      </div>
     </div>
 
   </div>
   <div class="row justify-content-center">
-    <div class="col-4">
-      <input type="submit" id="contactFormSubmit" class="btn btn-block btn-primary" value="Submit" />
+    <div class="col-auto">
+      <a href="#"><i data-toggle="collapse" class="fas fa-2x fa-angle-down" data-target="#contact-form__contact-info" aria-expanded="false" aria-controls="collapseExample"></i></a>
     </div>
   </div>
 </form>

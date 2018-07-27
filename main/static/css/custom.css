@@ -70,10 +70,14 @@ section {
 
 /* b-cta */
 
+@media (min-width: 576px) {
+  .s-header .b-cta {
+    font-size: 1.5em;
+  }
 
+}
 .s-header .b-cta {
   border-radius: 35px;
-  font-size: 1.5em;
 }
 
 .b-cta {

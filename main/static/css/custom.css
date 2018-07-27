@@ -138,12 +138,14 @@ section {
   min-height: 10%;
 }
 
-/* articles */
+/* s-articles */
 
-.articles {
+.s-articles {
   padding-top: 0em;;
 }
-.article > .col {
+
+/* b-article-preview */
+.b-article-preview {
   background-color: #fff;
   border-right: solid 2px;
   border-color: #b1b1b1

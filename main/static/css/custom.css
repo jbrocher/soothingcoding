@@ -10,18 +10,14 @@
    font-family: Lato;
  }
 
-a {
-  color: #99D3DF;
-
-}
-
-a:hover {
-  color: #88BBD6;
+h1, h2, h3, h4 {
+  color: var(--secondary-grey);
 }
 
 .parallax-window {
     background: transparent;
 }
+
 section {
   padding : 4rem 0;
 }

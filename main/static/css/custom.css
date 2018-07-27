@@ -54,10 +54,12 @@ section {
 
 .b-h1__title {
   font-size: 3.5em;
+  color: #fff
 }
 
 .b-h1__slogan {
   opacity: 0.7;
+  color: white;
 }
 
 /* b-h2 */

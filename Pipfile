@@ -30,6 +30,10 @@ django-sekizai = ">=0.9"
 heroku = "*"
 django-heroku = "*"
 gunicorn = "*"
+django-pipeline = "*"
+cssmin = "*"
+libsasscompiler = "*"
+slimit = "*"
 
 
 [dev-packages]

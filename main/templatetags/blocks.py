@@ -3,5 +3,5 @@ register = template.Library()
 
 
 @register.inclusion_tag('main/blocks/b-header.html')
-def header():
-    pass
+def header(title):
+    return {'title':title}

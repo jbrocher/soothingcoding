@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+{% load static %}
+{% load blocks %}
+
+{% block content %}
+{% header "methodology" %}
+<section class="d-none d-md-block container-fluid s-classic-vs-agile">  
+  <div class="row justify-content-center">
+    <div class="col-auto">
+      <div class="b-h2">
+        <h2 class="b-h2__title p-5 ">Gestion <span class="b-h2__highlight p-2">agile</span> V.S. Gestion <span class="b-h2__highlight b-h2__highlight--dark p-2">classique</span></h2>
+      </div>
+    </div>
+  </div>
+  <div class="s-classic-vs-agile__table">
+    <div class="b-vs">
+      VS
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-4 p-3 s-classic-vs-agile__col--good">
+        <div data-aos-duration=500 data-aos="fade-right" class="w-50 text-center mx-auto b-comparison-item">
+          <h3 class="b-comparison-item__title text-center p-2">Des coûts maitrisés</h3>
+              <p class="b-comparison-item__text my-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <i class="fas fa-laptop fa-6x mr-2s"></i>
+        </div>
+      </div>
+      <div class="col-4 p-3 s-classic-vs-agile__col--bad">
+        <div data-aos-duration=500 data-aos="fade-left" class="w-50 mx-auto b-comparison-item">
+          <h3 class="b-comparison-item__title text-center p-2">Des coûts maitrisés</h3>
+          <p class="b-comparison-item__text  my-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div  class="col-4 p-3 s-classic-vs-agile__col--good">
+        <div data-aos-duration=500 data-aos="fade-right" class="w-50 mx-auto b-comparison-item">
+          <h3 class="b-comparison-item__title text-center p-2">Des coûts maitrisés</h3>
+          <p class="b-comparison-item__text  my-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+      <div class="col-4 p-3 s-classic-vs-agile__col--bad">
+        <div data-aos-duration=500 data-aos="fade-left" class="w-50 mx-auto b-comparison-item">
+          <h3 class="b-comparison-item__title text-center p-2">Des coûts maitrisés</h3>
+          <p class="b-comparison-item__text  my-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sClassicVsAgileCarousel" class="d-md-none carousel slide s-classic-vs-agile-carousel" data data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="row justify-content-center">
+        <div class="col p-3 s-classic-vs-agile__col--good">
+          <div class="text-center mx-auto b-comparison-item b-comparison-item--mobile">
+            <h3 class="b-comparison-item__title text-center mb-4 p-2">Des coûts maitrisés</h3>
+            <i class="fas fa-laptop fa-6x mr-2s"></i>
+
+          </div>
+        </div>
+        <div class="w-100 d-md-none">
+
+        </div>
+        <div class="col p-3 s-classic-vs-agile__col--bad">
+          <div class="text-center mx-auto b-comparison-item b-comparison-item--mobile">
+            <h3 class="b-comparison-item__title text-center mb-4 p-2">Des coûts maitrisés</h3>
+            <i class="fas fa-laptop fa-6x mr-2s"></i>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row justify-content-center">
+        <div class="col p-3 s-classic-vs-agile__col--good">
+          <div class=" text-center mx-auto b-comparison-item b-comparison-item--mobile">
+            <h3 class="b-comparison-item__title text-center mb-4 p-2">Bonjour je fais des test</h3>
+            <i class="fas fa-laptop fa-6x mr-2s"></i>
+
+          </div>
+        </div>
+        <div class="w-100 d-md-none">
+
+        </div>
+        <div class="col p-3 s-classic-vs-agile__col--bad">
+          <div class="text-center mx-auto b-comparison-item b-comparison-item--mobile">
+            <h3 class="b-comparison-item__title text-center mb-4 p-2">Des pas coûts maitrisés</h3>
+            <i class="fas fa-laptop fa-6x mr-2s"></i>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev .s-classic-vs-agile-carousel__control" href="#sClassicVsAgileCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next .s-classic-vs-agile-carousel__control" href="#sClassicVsAgileCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</section>
+{% endblock %}

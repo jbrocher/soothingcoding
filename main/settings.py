@@ -61,8 +61,34 @@ USE_TZ = True
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(DATA_DIR, 'media')
-STATIC_ROOT = os.path.join(DATA_DIR, 'static')
+STATIC_ROOT = os.path.join(DATA_DIR, 'staticfiles')
 
+STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
+
+PIPELINE = {
+    'CSS_COMPRESSOR': 'pipeline.compressors.cssmin.CSSMinCompressor',
+    'JS_COMPRESSOR': 'pipeline.compressors.slimit.SlimItCompressor',
+    'CSSMIN_BINARY': 'cssmin',
+    'COMPILERS': (
+     'libsasscompiler.LibSassCompiler',
+     ),
+    'JAVASCRIPT': {
+        'main': {
+            'source_filenames': (
+                'website/blocks/*.js',
+            ),
+            'output_filename': 'blocks.min.js',
+        }
+    },
+    'STYLESHEETS': {
+        'main': {
+            'source_filenames': (
+                'main/blocks/style.scss',
+            ),
+            'output_filename': 'blocks.min.css',
+        }
+    }
+}
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'main', 'static'),
 )
@@ -138,7 +164,8 @@ INSTALLED_APPS = (
     'djangocms_googlemap',
     'djangocms_video',
     'main',
-    'contact_form'
+    'contact_form',
+    'pipeline',
 
 
 )
@@ -171,7 +198,8 @@ CMS_TEMPLATES = (
     ('fullwidth.html', 'Fullwidth'),
     ('sidebar_left.html', 'Sidebar Left'),
     ('sidebar_right.html', 'Sidebar Right'),
-    ('frontpage.html', 'Front Page')
+    ('frontpage.html', 'Front Page'),
+    ('methodology.html', 'Methodology'),
 )
 
 CMS_PERMISSION = True

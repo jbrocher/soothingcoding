@@ -15,3 +15,8 @@ def section_title(title):
 @register.inclusion_tag('main/blocks/b-card-icon.html')
 def card_icon(icon, title, text):
     return {'icon': icon, 'title': title, 'text': text}
+
+
+@register.inclusion_tag('main/blocks/b-subtitle.html')
+def subtitle(text):
+    return {'text': text}

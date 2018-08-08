@@ -238,6 +238,6 @@ django_heroku.settings(locals())
 
 # env
 
-CMS_PAGE_CACHE = os.environ.get('PAGE_CACHE')
-CMS_PLACEHOLDER_CACHE = os.environ.get('PLACEHOLDER_CACHE')
-CMS_PLUGIN_CACHE = os.environ.get('PLUGIN_CACHE')
+CMS_PAGE_CACHE = False
+CMS_PLACEHOLDER_CACHE = False
+CMS_PLUGIN_CACHE = False

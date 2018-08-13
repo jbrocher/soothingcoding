@@ -106,7 +106,7 @@
 
 <section class="b-agile-workflow">
   {% section_title "La méthode SCRUM" %}
-  <div class="b-agile-workflow__definitions">
+  <div class="b-agile-workflow__definitions d-none d-xl-block">
     {% subtitle 'Les protagonistes' %}
     <div class="b-agile-workflow__row row row justify-content-around">
       <div class="col ">
@@ -147,6 +147,46 @@
       </div>
     </div>
   </div>
-  <img src="" alt="">
+
+    <div id="agileWorkflowDefintionsMobile" class="d-xl-none b-agile-workflow__definitions-mobile carousel slide" data-ride="false" data-interval="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row justify-content-center">
+            <div class="col-auto">
+              {% card_icon "img/user_story.jpg" "User Story" "La <strong>User Story</strong> représente une fonctionnalité à ajouter au projet. Celle-ci est décrite du point de vue de l'utilisateur; Par exemple : \'En tant que visiteur du site, je veux pouvoir contacter l'administarteur à l'aide d'un formulaire\' " %}
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-auto">
+              {% card_icon "img/product_backlog.jpg" "Product Backlog" "Le Product Backlog est la liste des User Stories, et donc des foncionnalités, qui feront parties du projet. Les User Stories du <strong>Product Backlog</strong> sont triées par ordre de priorité" %}
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-auto">
+              {% card_icon "img/sprint.jpg" "Sprint" "Le <strong>Sprint</strong> est une itération de deux semaines lors de laquelle sont complétées plusieurs <strong>User Stories </strong>" %}
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-auto">
+              {% card_icon "img/sprint_backlog.jpg" "Sprint Backlog" "Le <strong> Sprint Backlog </strong> est l'ensemble des <strong>User stories</strong> qui seront réalisées au cours du prochain sprint" %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#agileWorkflowDefintionsMobile" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#agileWorkflowDefintionsMobile" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
 </section>
 {% endblock %}

@@ -235,3 +235,9 @@ DATABASES = {
 # Setting up django-heroku
 
 django_heroku.settings(locals())
+
+# env
+
+CMS_PAGE_CACHE = False
+CMS_PLACEHOLDER_CACHE = False
+CMS_PLUGIN_CACHE = False

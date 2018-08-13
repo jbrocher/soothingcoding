@@ -1,0 +1,29 @@
+.b-card-icon {
+  width: 250px;
+  height:450px;
+  background-color: $white;
+  border: solid 1px $secondary-blue;
+  border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+  .b-card-icon{
+    width: 500px;
+    height: 550px;
+  }
+}
+
+.b-card-icon__img {
+  width:150px;
+  height:150px;
+
+}
+
+.b-card-icon__title {
+  color:$secondary-grey;
+}
+
+.b-card-icon__text {
+  color:$secondary-grey;
+  margin-top:50px;
+}

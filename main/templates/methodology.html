@@ -271,7 +271,7 @@
     </div>
     <div class="mt-5 row">
       <div class="col p-5 justify-content-center">
-        <div id="agileWorkflowSteps" class="b-agile-workflow__steps carousel slide" data-ride="false" data-interval="false">
+        <div id="agileWorkflowSteps" class="d-lg-block d-none b-agile-workflow__steps carousel slide" data-ride="false" data-interval="false">
           <div class="carousel-inner">
             <div class="carousel-item active">
               <div class="row justify-content-center p-5">
@@ -313,6 +313,41 @@
             <span class="sr-only">Next</span>
           </a>
         </div>
+        <div id="agileWorkflowStepsMobile" class="d-lg-none b-agile-workflow__steps-mobile carousel slide" data-ride="false" data-interval="false">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              {% step "01" "fa-code" "Test" "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure" "orange" %}
+            </div>
+            <div class="carousel-item">
+              {% step "02" "fa-code" "Test" "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure" "red" %}
+            </div>
+            <div class="carousel-item">
+              {% step "03" "fa-code" "Test" "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure" "blue" %}
+            </div>
+            <div class="carousel-item">
+              {% step "04" "fa-code" "Test" "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure" "green" %}
+            </div>
+            <div class="carousel-item">
+              {% step "05" "fa-code" "Test" "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure" "orange" %}
+            </div>
+            <div class="carousel-item">
+              {% step "06" "fa-code" "Test" "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure" "red" %}
+            </div>
+            <div class="carousel-item">
+              {% step "07" "fa-code" "Test" "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure" "blue" %}
+            </div>
+            <div class="carousel-item">
+              {% step "08" "fa-code" "Test" "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure" "green" %}
+            </div>
+          </div>
+          <a class="carousel-control-prev b-agile-workflow___steps-prev-control" href="#agileWorkflowStepsMobile" role="button" data-slide="prev">
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next b-agile-workflow___steps-next-control" href="#agileWorkflowStepsMobile" role="button" data-slide="next">
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
       </div>
     </div>
   </div>

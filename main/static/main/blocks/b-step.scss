@@ -1,4 +1,14 @@
 
+@media (min-width: 992) {
+  .b-step__body {
+    padding: 7em 2em 2em 2em;
+  }
+}
+
+.b-step__body {
+  padding: 2em 2em 2em 2em;
+}
+
 
 .b-step__header {
   padding: 5em 2em 2em 2em ;
@@ -34,9 +44,7 @@
   font-size:1.5em;
 }
 
-.b-step__body {
-  padding: 7em 2em 2em 2em;
-}
+
 
 .b-step__text {
   color:$secondary-grey;

@@ -23,10 +23,11 @@ def subtitle(text):
 
 
 @register.inclusion_tag('main/blocks/b-step.html')
-def step(step, icon, title, text):
+def step(step, icon, title, text, color):
     return {
         'step': step,
         'text': text,
         'title': title,
-        'icon': icon
+        'icon': icon,
+        'color': color
         }

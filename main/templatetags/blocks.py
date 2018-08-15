@@ -20,3 +20,13 @@ def card_icon(icon, title, text):
 @register.inclusion_tag('main/blocks/b-subtitle.html')
 def subtitle(text):
     return {'text': text}
+
+
+@register.inclusion_tag('main/blocks/b-step.html')
+def step(step, icon, title, text):
+    return {
+        'step': step,
+        'text': text,
+        'title': title,
+        'icon': icon
+        }

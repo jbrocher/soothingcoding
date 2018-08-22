@@ -8,8 +8,8 @@ def header(title):
 
 
 @register.inclusion_tag('main/blocks/b-section-title.html')
-def section_title(title):
-    return {'title': title}
+def section_title(modifier, title):
+    return {'title': title, "modifier": modifier}
 
 
 @register.inclusion_tag('main/blocks/b-card-icon.html')

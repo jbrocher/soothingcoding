@@ -31,3 +31,8 @@ def step(step, icon, title, text, color):
         'icon': icon,
         'color': color
         }
+
+
+@register.inclusion_tag('main/blocks/b-cta.html')
+def cta(text, modifier):
+    return {'text': text, 'modifier': modifier}

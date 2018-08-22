@@ -1,0 +1,40 @@
+.b-cta {
+  background-color: $main-blue;
+  border:None;
+  color: $white;
+  padding: 0.5em;
+}
+
+.b-cta:hover, .b-cta:active, .b-cta:focus {
+  background-color: $secondary-blue;
+  box-shadow: 0 0 0 0.2rem  $secondary-grey;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+}
+
+.b-cta--white:hover, .b-cta--white:active, .b-cta--white:focus {
+  box-shadow: 0 0 0 0.2rem  $white;
+}
+
+
+.b-cta--outlined {
+  color: $main-blue;
+  background-color: white;
+  border: solid 1px;
+  border-color: $main-blue;
+  text-transform: none;
+}
+
+.b-cta--outlined:hover, .b-cta--outlined:active, .b-cta--outlined:focus {
+  border:None;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color:white;
+
+}
+
+.b-cta--big {
+  font-size: 1.5em;
+  border-radius: 30px;
+}

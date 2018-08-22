@@ -94,34 +94,7 @@ section {
   border-radius: 35px;
 }
 
-.b-cta {
-  background-color: var(--main-blue);
-  border:None;
-}
 
-.b-cta:hover, .b-cta:active, .b-cta:focus {
-  background-color: var(--secondary-blue);
-  box-shadow: 0 0 0 0.2rem  var(--secondary-grey);
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-
-}
-
-.b-cta--outlined {
-  color: var(--main-blue);
-  background-color: white;
-  border: solid 1px;
-  border-color: var(--main-blue);
-  text-transform: none;
-}
-
-.b-cta--outlined:hover, .b-cta--outlined:active, .b-cta--outlined:focus {
-  border:None;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  color:white;
-
-}
 /* b-value-proposition-item */
 
 .b-value-proposition-item__icon {

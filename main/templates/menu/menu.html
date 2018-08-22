@@ -1,5 +1,5 @@
 {% load menu_tags %}
-
+{% load blocks %}
   <nav class="b-menu-general bg-white fixed-top navbar navbar-expand-md navbar-light">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#b-menu-general__collapse" aria-controls="b-menu-general__collapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -16,7 +16,7 @@
               </li>
           {% endfor %}
           <li class="align-middle d-inline ml-2">
-              <button href="#" class="b-cta b-cta--outlined btn btn-primary">En savoir plus</button>
+            {% cta 'Lancer mon projet' 'b-cta--outlined' '#'%}
           </li>
         </ul>
       </div>

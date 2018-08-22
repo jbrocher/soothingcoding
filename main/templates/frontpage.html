@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load cms_tags %}
 {% load static %}
+{% load blocks %}
 {% block content %}
 <header  data-parallax='scroll' data-speed=0.5 data-image-src = "{% static 'img/header.jpg' %}" class="parallax-window masthead text-center slow-scroll text-white d-flex s-header">
   <div class="container my-auto">
@@ -31,25 +32,13 @@
     </div>
     <div class="row">
         <div class="col mx-4 text-center">
-          <div class="b-value-proposition-item mt-5 mx-auto">
-            <i class="b-value-proposition-item__icon fa fa-4x fa-pen  mb-3 sr-icons"></i>
-            <h3 class="mb-3">Conception</h3>
-            <h5 class="b-value-proposition-item__subtitle mb-0">Nous vous accompagnons dans l'expression de votre besoin</h5>
-          </div>
+          {% value_service "fa-pen" "Conception" "Nous vous accompagnons dans l'expression de votre besoin" %}
         </div>
         <div class=" mx-4 col text-center">
-          <div class="b-value-proposition-item mt-5 mx-auto">
-            <i class="fa fa-4x fa-code b-value-proposition-item__icon mb-3 sr-icons"></i>
-            <h3 class="mb-3">Réalisation</h3>
-            <h5 class="mb-0">Développement de votre site à l'aide des technologies les plus récentes</h5>
-          </div>
+          {% value_service "fa-code" "Réalisation" "Développement de votre site à l'aide des technologies les plus récentes" %}
         </div>
         <div class="mx-4 col text-center">
-          <div class="b-value-proposition-item mt-5 mx-auto">
-            <i class="b-value-proposition-item__icon fa fa-4x fa-laptop mb-3 sr-icons"></i>
-            <h3 class="mb-3">Formation</h3>
-            <h5 class="mb-0">Restez maîtres de votre projet</h5>
-          </div>
+          {% value_service "fa-laptop" "Formation" "Restez maîtres de votre projet" %}
         </div>
     </div>
   </div>

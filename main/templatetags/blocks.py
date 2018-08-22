@@ -33,6 +33,11 @@ def step(step, icon, title, text, color):
     }
 
 
+@register.inclusion_tag('main/blocks/b-cta.html')
+def cta(text, modifier):
+    return {'text': text, 'modifier': modifier}
+
+
 @register.inclusion_tag('main/blocks/b-value-service.html')
 def value_service(icon, title, text):
     return {

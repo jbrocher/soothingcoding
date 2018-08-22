@@ -38,6 +38,11 @@ def cta(text, modifier, link):
     return {'text': text, 'modifier': modifier, 'link': link}
 
 
+@register.inclusion_tag('main/blocks/b-button.html')
+def button(text, modifiers):
+    return {'text': text, 'modifiers': modifiers}
+
+
 @register.inclusion_tag('main/blocks/b-value-service.html')
 def value_service(icon, title, text):
     return {

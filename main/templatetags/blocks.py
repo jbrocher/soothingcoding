@@ -30,4 +30,13 @@ def step(step, icon, title, text, color):
         'title': title,
         'icon': icon,
         'color': color
-        }
+    }
+
+
+@register.inclusion_tag('main/blocks/b-value-service.html')
+def value_service(icon, title, text):
+    return {
+        'icon': icon,
+        'title': title,
+        'text': text
+    }

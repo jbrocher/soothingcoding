@@ -8,7 +8,7 @@ from contact_form.forms import PotentialForm
 @plugin_pool.register_plugin
 class ContactFormPlugin(CMSPluginBase):
     model = CMSPlugin
-    render_template = "contact_form/contact_form_plugin.html"
+    render_template = "contact_form/b-contact-form.html"
     cache = False
 
     def render(self, context, instance, placeholder):

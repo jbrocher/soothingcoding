@@ -216,3 +216,33 @@ section {
   padding: 2em;
   z-index:100
 }
+
+html {
+  overflow-y: scroll
+
+}
+
+/* contact section */
+
+.contact_section {
+  background-image: url('/static/img/services-2.jpg');
+  background-position: center;
+  background-size: cover;
+
+}
+
+.contact-information {
+  height: 600px;
+  background-color: white;
+  position:relative;
+}
+
+.b-contact-information__information{
+  position:absolute;
+  height: 200px;
+  width:300px;
+  top: 50%;
+  margin-top: -100px;
+  left: 50%;
+  margin-left: -150px;
+}

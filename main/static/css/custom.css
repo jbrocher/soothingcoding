@@ -170,12 +170,11 @@ section {
 }
 .s-classic-vs-agile__col--good {
   background-color:white;
-  color: var(--secondary-blue);
-
+color:var(--secondary-grey);
 }
 
 .s-classic-vs-agile__col--bad {
-  background-color: var(--main-grey);
+  background-color: var(--secondary-grey);
   color:white;
 
 }
@@ -210,7 +209,7 @@ section {
   left: 50%;
   border: solid 1px;
   border-radius: 50%;
-  background-color: var(--secondary-grey);
+  background-color: var(--secondary-blue);
   transform: translate(-50%, -50%);
   color:white;
   padding: 2em;

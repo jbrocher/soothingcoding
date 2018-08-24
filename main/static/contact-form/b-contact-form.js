@@ -20,11 +20,6 @@ function getCookie (name) {
 
 // this is the id of the form
 $(document).ready(function () {
-  $('.contact-form__btn').on('click', function () {
-    var relatedInputId = $(this).attr('for')
-    $('#' + relatedInputId).prop('checked', true)
-
-  })
   $('#contactForm').submit(function (e) {
     e.preventDefault() // avoid to execute the actual submit of the form.
 
@@ -43,6 +38,39 @@ $(document).ready(function () {
         })
       }
     })
+  })
+
+  $('.b-contact-form__radio').on('click', function(e){
+    e.preventDefault()
+    $(this).addClass('b-button--clicked')
+    $(this).parent().parent().find('.b-contact-form__radio').removeClass('b-button--clicked')
+    $(this).parent().trigger('click')
+  })
+
+
+  $('.b-contact-form__collapse-toggle').on('click', function () {
+
+    if ($(this).hasClass('fa-rotate-180')) {
+
+      $(this).removeClass('fa-rotate-180')
+      $('.contact-form').css('height', '600px')
+
+    } else {
+
+      $(this).addClass('fa-rotate-180')
+      $('.contact-form').css('height', '100%')
+
+    }
+  })
+
+  $('#id_project_desc').on('keydown', function (e){
+    if(e.key != "Backspace"){
+      $('#contact-form__contact-info').collapse('show')
+      if (!$('.b-contact-form__collapse-toggle').hasClass('fa-rotate-180')){
+        $('.b-contact-form__collapse-toggle').trigger('click')
+
+      }
+    }
   })
 })
 

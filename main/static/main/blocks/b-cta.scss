@@ -1,40 +1,60 @@
-.b-cta {
+.b-cta__button {
   background-color: $main-blue;
   border:None;
   color: $white;
-  padding: 0.5em;
-}
-
-.b-cta:hover, .b-cta:active, .b-cta:focus {
-  background-color: $secondary-blue;
-  box-shadow: 0 0 0 0.2rem  $secondary-grey;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  text-decoration: none;
+  cursor: pointer;
+  height: 40px;
+  width: 150px;
+  border-radius: 5px;
+}
+
+.b-cta__button:hover, .b-cta__button:active, .b-cta__button:focus {
+  background-color: $secondary-blue;
+  border: solid 3px $secondary-grey;
+  outline:none;
 
 }
 
-.b-cta--white:hover, .b-cta--white:active, .b-cta--white:focus {
-  box-shadow: 0 0 0 0.2rem  $white;
+.b-cta--white .b-cta__button:hover, .b-cta--white .b-cta__button:active, .b-cta--white .b-cta__button:focus {
+  border: solid 3px $white;
 }
 
 
-.b-cta--outlined {
+.b-cta--outlined .b-cta__button{
   color: $main-blue;
   background-color: white;
   border: solid 1px;
   border-color: $main-blue;
-  text-transform: none;
 }
 
-.b-cta--outlined:hover, .b-cta--outlined:active, .b-cta--outlined:focus {
-  border:None;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+.b-cta--outlined .b-cta__button:hover, .b-cta--outlined .b-cta__button:active, .b-cta--outlined .b-cta__button:focus {
   color:white;
+  border: solid 3px $secondary-grey;
+  background-color: $secondary-blue;
 
 }
 
-.b-cta--big {
+.b-cta--big .b-cta__button {
   font-size: 1.5em;
-  border-radius: 30px;
+  height: 80px;
+  width: 300px;
+  border-radius: 50px;
+}
+
+.b-cta--lg .b-cta__button {
+  width: 200px;
+}
+
+.b-cta--grey .b-cta__button {
+  color: $white;
+  background-color: $secondary-grey;
+}
+
+.b-cta--grey .b-cta__button:hover, .b-cta--grey .b-cta__button:active, .b-cta--grey .b-cta__button:focus {
+  color:white;
+  border: solid 3px $main-grey;
+
 }

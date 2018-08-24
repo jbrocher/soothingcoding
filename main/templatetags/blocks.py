@@ -8,8 +8,8 @@ def header(title):
 
 
 @register.inclusion_tag('main/blocks/b-section-title.html')
-def section_title(title):
-    return {'title': title}
+def section_title(modifier, title):
+    return {'title': title, "modifier": modifier}
 
 
 @register.inclusion_tag('main/blocks/b-card-icon.html')
@@ -30,9 +30,23 @@ def step(step, icon, title, text, color):
         'title': title,
         'icon': icon,
         'color': color
-        }
+    }
 
 
 @register.inclusion_tag('main/blocks/b-cta.html')
-def cta(text, modifier):
-    return {'text': text, 'modifier': modifier}
+def cta(text, modifier, link):
+    return {'text': text, 'modifier': modifier, 'link': link}
+
+
+@register.inclusion_tag('main/blocks/b-button.html')
+def button(text, modifiers):
+    return {'text': text, 'modifiers': modifiers}
+
+
+@register.inclusion_tag('main/blocks/b-value-service.html')
+def value_service(icon, title, text):
+    return {
+        'icon': icon,
+        'title': title,
+        'text': text
+    }

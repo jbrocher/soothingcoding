@@ -75,7 +75,8 @@ PIPELINE = {
     'JAVASCRIPT': {
         'main': {
             'source_filenames': (
-                'website/blocks/*.js',
+                'main/blocks/*.js',
+                'contact-form/b-contact-form.js'
             ),
             'output_filename': 'blocks.min.js',
         }
@@ -84,6 +85,7 @@ PIPELINE = {
         'main': {
             'source_filenames': (
                 'main/blocks/style.scss',
+                'contact-form/b-contact-form.scss'
             ),
             'output_filename': 'blocks.min.css',
         }

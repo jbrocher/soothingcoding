@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load cms_tags %}
 {% load static %}
+{% load blocks %}
 {% block content %}
 <header  data-parallax='scroll' data-speed=0.5 data-image-src = "{% static 'img/header.jpg' %}" class="parallax-window masthead text-center slow-scroll text-white d-flex s-header">
   <div class="container my-auto">
@@ -23,7 +24,7 @@
           </div>
           <div class="row justify-content-center">
             <div class="col-md-6 col-lg-4">
-              <button class="b-cta p-3 btn btn-primary btn-block btn-lg" href="#about">Je veux lancer mon projet !</button>
+              {% cta 'Démarrer mon projet' 'b-cta--big' '/fr/contact'%}
             </div>
           </div>
         </div>
@@ -31,25 +32,13 @@
     </div>
     <div class="row">
         <div class="col mx-4 text-center">
-          <div class="b-value-proposition-item mt-5 mx-auto">
-            <i class="b-value-proposition-item__icon fa fa-4x fa-pen  mb-3 sr-icons"></i>
-            <h3 class="mb-3">Conception</h3>
-            <h5 class="b-value-proposition-item__subtitle mb-0">Nous vous accompagnons dans l'expression de votre besoin</h5>
-          </div>
+          {% value_service "fa-pen" "Conception" "Nous vous accompagnons dans l'expression de votre besoin" %}
         </div>
         <div class=" mx-4 col text-center">
-          <div class="b-value-proposition-item mt-5 mx-auto">
-            <i class="fa fa-4x fa-code b-value-proposition-item__icon mb-3 sr-icons"></i>
-            <h3 class="mb-3">Réalisation</h3>
-            <h5 class="mb-0">Développement de votre site à l'aide des technologies les plus récentes</h5>
-          </div>
+          {% value_service "fa-code" "Réalisation" "Développement de votre site à l'aide des technologies les plus récentes" %}
         </div>
         <div class="mx-4 col text-center">
-          <div class="b-value-proposition-item mt-5 mx-auto">
-            <i class="b-value-proposition-item__icon fa fa-4x fa-laptop mb-3 sr-icons"></i>
-            <h3 class="mb-3">Formation</h3>
-            <h5 class="mb-0">Restez maîtres de votre projet</h5>
-          </div>
+          {% value_service "fa-laptop" "Formation" "Restez maîtres de votre projet" %}
         </div>
     </div>
   </div>
@@ -100,7 +89,7 @@
                 <p class="card-text">Permettez à vos clients de profiter de vos services chez eux, 24h sur 24. Le E-commerce permet de mettre le digital au service de vos produits</p>
               </div>
               <div class="card-footer b-service-card__footer">
-                <button href="#" data-toggle='modal' data-target='.modal-details' data-value="Un site E-commerce et une boutique en ligne permmetant aux utilisateurs de parcourir et le catalogue et réalisé leurs achats directment de chez eux. Une espace administrateur permet de gérer les commandes et le stock, tout en offrant de nombreuses statistiques sur les performance de l'activité" data-list='{"tech":"prestashop", "time":"2 mois", "cost":"2000€ - 3000€"}' data-title="E-commerce" class="b-cta btn btn-primary">En savoir plus</button>
+                <button href="#" data-toggle='modal' data-target='.modal-details' data-value="Un site E-commerce et une boutique en ligne permmetant aux utilisateurs de parcourir et le catalogue et réalisé leurs achats directment de chez eux. Une espace administrateur permet de gérer les commandes et le stock, tout en offrant de nombreuses statistiques sur les performance de l'activité" data-list='{"tech":"prestashop", "time":"2 mois", "cost":"2000€ - 3000€"}' data-title="E-commerce" class="b-toggle-modal btn btn-primary">En savoir plus</button>
               </div>
             </div>
           </div>
@@ -183,13 +172,13 @@
       </div>
       <div class="modal-footer">
         <div class="container">
-          <div class="row">
-            <div class="col">
-              <button type="button" class="btn btn-block btn-secondary" data-dismiss="modal">Close</button>
+          <div class="row justify-content-around">
+            <div class="col-auto">
+              {% cta "Close" "b-cta--lg b-cta--grey" "#" %}
             </div>
             <div class="w-100 d-sm-none"></div>
-            <div class="col">
-              <button type="button" class="b-cta btn btn-block btn-primary">Commencer mon projet !</button>
+            <div class="col-auto">
+              {% cta "Commencer mon projet !" "b-cta--lg" "/fr/contact" %}
             </div>
           </div>
         </div>
@@ -247,7 +236,7 @@
 
                   </div>
                   <div class="col col-sm-4 text-center my-auto">
-                    <button class="b-cta btn btn-primary" href="#">Tout savoir sur SCRUM</button>
+                    {% cta "En savoir plus" "" "/fr/methodology" %}
                   </div>
                 </div>
             </div>
@@ -275,7 +264,7 @@
             </div>
             <div class="row mt-4 p-3">
               <div class="col text-center my-auto">
-                <button class="b-cta btn btn-primary" href="#">En savoir plus</button>
+              {% cta "En savoir plus" "" "#" %}
               </div>
             </div>
           </div>

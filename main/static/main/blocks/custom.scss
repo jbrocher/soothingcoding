@@ -17,9 +17,7 @@ h1, h2, h3, h4 {
     background: transparent;
 }
 
-section {
-  padding : 4rem 0;
-}
+
 
 .tooltip-inner {
   background-color: #f8f9fa;
@@ -89,6 +87,7 @@ section {
 
 .b-service-card{
   background-color: white;
+  opacity: 0.9;
   border:0px;
   margin-bottom: 1em;
 }
@@ -108,14 +107,15 @@ section {
 /* s-articles */
 
 .s-articles {
-  padding-top: 0em;;
+  padding-bottom: 0em;
+  padding-top: 0em;
 }
 
 /* b-article-preview */
 .b-article-preview {
   background-color: #fff;
-  border-right: solid 2px;
-  border-color: #b1b1b1
+  border-right : solid 2px;
+  border-color: $secondary-grey;
 }
 
 

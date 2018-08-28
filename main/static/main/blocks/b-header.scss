@@ -4,7 +4,15 @@
 
 .b-header__title {
   color:$white;
+  font-size: 2em;
+}
 
+@media (min-width: 768px) {
+
+  .b-header__title {
+    font-size: 2.5em;
+
+  }
 }
 
 .b-header__img-container {

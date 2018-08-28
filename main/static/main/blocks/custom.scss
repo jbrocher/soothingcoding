@@ -1,18 +1,16 @@
 /* General customization*/
-:root {
-  --main-blue:#99D3DF;
-  --secondary-blue: #88BBD6;
-  --main-grey: #CDCDCD;
-  --secondary-grey : #7e7e7e
 
-}
  body {
    font-family: Lato;
    padding-top: 95px;
  }
 
+.container-fluid {
+  padding: 0;
+  overflow-x: hidden;
+}
 h1, h2, h3, h4 {
-  color: var(--secondary-grey);
+  color: $secondary-grey;
 }
 
 .parallax-window {
@@ -39,8 +37,8 @@ section {
 .b-separator {
   border: None;
   height: 3px;
-  color: var(--main-blue); /* old IE */
-  background-color: var(--main-blue); /* Modern Browsers */
+  color: $main-blue; /* old IE */
+  background-color: $main-blue; /* Modern Browsers */
   width:25%;
 }
 
@@ -59,28 +57,33 @@ section {
 /* b-h2 */
 
 .b-h2__title {
-  color: var(--secondary-grey);
+  color: $secondary-grey;
 }
 
 .b-h2__title--boxed {
-  border: solid 3px var(--main-blue)
+  border: solid 3px $main-blue
 }
 
 .b-h2__highlight {
   background-color: white;
-  color:var(--main-blue);
+  color:$main-blue;
 }
 
 .b-h2__highlight--dark {
-  background-color: var(--secondary-grey);
+  background-color: $secondary-grey;
   color:white
 }
 
 /* b-value-proposition-item */
 
 .b-value-proposition-item__icon {
-  color : var(--main-blue)
+  color : $main-blue
 }
+
+.container-f{
+       padding: 0;
+       overflow-x: hidden;
+   }
 
 /*services*/
 
@@ -155,17 +158,17 @@ section {
 }
 .s-classic-vs-agile__col--good {
   background-color:white;
-color:var(--secondary-grey);
+color:$secondary-grey;
 }
 
 .s-classic-vs-agile__col--bad {
-  background-color: var(--secondary-grey);
+  background-color: $secondary-grey;
   color:white;
 
 }
 
 .s-classic-vs-agile-carousel__control {
-  color: var(--main-blue);
+  color: $main-blue;
   opacity:0.8;
 }
 
@@ -180,9 +183,9 @@ color:var(--secondary-grey);
 }
 .b-comparison-item__title {
   color: white;
-  background-color: var(--main-blue);
+  background-color: $main-blue;
   border: solid 1px;
-  border-color: var(--main-blue);
+  border-color: $main-blue;
   border-radius: 5px;
 }
 
@@ -194,7 +197,7 @@ color:var(--secondary-grey);
   left: 50%;
   border: solid 1px;
   border-radius: 50%;
-  background-color: var(--secondary-blue);
+  background-color: $secondary-blue;
   transform: translate(-50%, -50%);
   color:white;
   padding: 2em;

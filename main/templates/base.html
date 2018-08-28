@@ -29,8 +29,9 @@
     </head>
     <body class="bg-light" id="page-top">
         {% cms_toolbar %}
+        {% show_menu 0 100 100 100 "menu/menu.html"%}
+        
         <div class="container-fluid">
-          {% show_menu 0 100 100 100 "menu/menu.html"%}
           {% block content %}
           {% endblock content %}
         </div>

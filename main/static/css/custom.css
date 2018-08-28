@@ -8,7 +8,7 @@
 }
  body {
    font-family: Lato;
-   padding-top: 100px;
+   padding-top: 95px;
  }
 
 h1, h2, h3, h4 {
@@ -33,13 +33,6 @@ section {
   opacity : 1 !important;
 }
 
-
-/* s-header */
-
-.s-header {
-  padding-top: 10%;
-  padding-bottom: 10%;
-}
 
 /* b-separator */
 
@@ -104,18 +97,10 @@ section {
 /* b-menu-general */
 
 
-.b-menu-general--border{
-  border-right: solid 1px;
-}
-.b-menu-general .nav-item:hover :not(.b-menu-general__btn ) {
-  color: var(--main-grey) ;
-
-}
 
 
-.b-menu-general{
-  min-height: 10%;
-}
+
+
 
 /* s-articles */
 

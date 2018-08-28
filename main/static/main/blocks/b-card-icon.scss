@@ -1,7 +1,7 @@
 .b-card-icon {
   width: 250px;
   height:450px;
-  background-color: $white;
+  background-color: $secondary-blue;
   border: solid 1px $secondary-blue;
   border-radius: 5px;
 }
@@ -16,14 +16,15 @@
 .b-card-icon__img {
   width:150px;
   height:150px;
+  border-radius: 50%;
 
 }
 
 .b-card-icon__title {
-  color:$secondary-grey;
+  color:$white;
 }
 
 .b-card-icon__text {
-  color:$secondary-grey;
+  color:$white;
   margin-top:50px;
 }

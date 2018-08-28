@@ -3,9 +3,7 @@
 {% load static %}
 {% load blocks %}
 {% block content %}
-<header  class=" masthead s-header">
-  <div data-parallax='scroll' data-speed=0.5 data-image-src = "{% static 'img/header.jpg' %}" class="b-hero__img parallax-window row">
-    <div class="col">
+<header data-parallax='scroll' data-speed=0.5 data-image-src = "{% static 'img/header.jpg' %}" class="b-hero__img parallax-window masthead mb-5 s-header">
       <div class="row">
         <div class="col">
           <div class="b-h1 text-center">
@@ -34,11 +32,9 @@
             {% value_service "fa-laptop" "Formation" "Restez maîtres de votre projet" %}
           </div>
       </div>
-    </div>
-  </div>
 </header>
-<section class="services">
-  <div class="row  p-4 parallax-window" data-parallax="scroll" data-image-src="{% static 'img/services-2.jpg' %}" data-speed="0.5" >
+<section class="services parallax-window mt-5" data-parallax="scroll" data-image-src="{% static 'img/services-2.jpg' %}" data-speed="0.5" >
+  <div class="row  p-4">
     <div class="col">
       <div class="b-h2">
         <div class="row mx-auto">

@@ -4,16 +4,21 @@
 {% load blocks %}
 
 {% block content %}
-{% header "methodology" %}
+{% header "methodologie" %}
 <section class="d-none d-md-block container-fluid s-classic-vs-agile">
   {% section_title "b-section-title--grey" "Comparaison avec la méthode classique" %}
-  <p class="text-center">
-    Pour commprendre les avantages de la méthode agile, le moyen le plus simple est encore de comprendre ce qu'elle apporte par rapport aux méthodes classiques.
-  </p>
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <p class="text-center">
+        Les méthodes agiles ont été créées pour palier au défaut des méthodes dîtes classiques (Cylce en V, Cascade... ) très performantes dans l'industries, mais inadaptées aux projets numériques. En effet ces-derniers possèdent un niveau de complexité de diversité qui nécessitent l'utilisation de méthode adapté pour garantir l'avancement du projet, et la qualité de la production. Ainsi une bonne manière d'introduire ces méthodes est de les comparer aux anciennes.
+      </p>
+    </div>
+  </div>
+
   <div class="row justify-content-center">
     <div class="col-auto">
       <div class="b-h2">
-        <h2 class="b-h2__title p-5 "> <span class="b-h2__highlight p-2">agile</span> V.S. <span class="b-h2__highlight b-h2__highlight--dark p-2">classique</span></h2>
+        <h2 class="b-h2__title p-5 "> <span class="b-h2__highlight b-h2__highlight--dark p-2">classique</span> V.S. <span class="b-h2__highlight p-2">agile</span></h2>
       </div>
     </div>
   </div>
@@ -22,46 +27,67 @@
       VS
     </div>
     <div class="row justify-content-center">
-      <div class="col-4 p-3 s-classic-vs-agile__col--good">
+      <div class="col-5 p-3 s-classic-vs-agile__col--bad">
         <div data-aos-duration=500 data-aos="fade-right" class="w-50 text-center mx-auto b-comparison-item">
-          <h3 class="b-comparison-item__title text-center p-2">Des coûts maitrisés</h3>
-              <p class="b-comparison-item__text my-4"><i class="float-left fas fa-laptop fa-4x mr-4 mb-2"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <h3 class="b-comparison-item__title text-center p-2">L'effet tunnel</h3>
+              <p class="b-comparison-item__text my-4"><i class="float-left fas fa-eye-slash fa-4x mr-4 mb-2"></i>
+                Les projets numériques offrent d'innombrables possibilités de fonctionnalités, architectures et design, ce qui entraine un risque important d'effet tunnel. L'effet tunnel apparaît lorsqu'il faut attendre la fin du projet, ou d'un cycle de production long, pour obtenir un élément fonctionnel.
+              Le client ne possède aucune grantie que le rendu final correspondra exactement à ce qu'il avait en tête au départ.</p>
 
         </div>
       </div>
-      <div class="col-4 p-3 s-classic-vs-agile__col--bad">
+      <div class="col-5 p-3 s-classic-vs-agile__col--good">
         <div data-aos-duration=500 data-aos="fade-left" class="w-50 mx-auto b-comparison-item">
-          <h3 class="b-comparison-item__title text-center p-2">Des coûts maitrisés</h3>
-              <p class="b-comparison-item__text my-4"><i class="float-left fas fa-laptop fa-4x mr-4 mb-2"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <h3 class="b-comparison-item__title text-center p-2">Le client au coeur du projet</h3>
+              <p class="b-comparison-item__text my-4"><i class="float-left fas fa-eye fa-4x mr-4 mb-2"></i>Avec les méthodes agiles le client est acteur principal du projet. Des itérations de développement courtes permettent la production régulières de fonctinnalités 100% opérationnelles qui donnent lieues à des démonstratoin. Ainsi le client à un retour très rapide et participe à faire évoluer le plan de production pour obtenir le produit qu'il désire réellement</p>
 
         </div>
       </div>
     </div>
     <div class="row justify-content-center">
-      <div  class="col-4 p-3 s-classic-vs-agile__col--good">
+      <div  class="col-5 p-3 s-classic-vs-agile__col--bad">
         <div data-aos-duration=500 data-aos="fade-right" class="w-50 mx-auto b-comparison-item">
-          <h3 class="b-comparison-item__title text-center p-2">Des coûts maitrisés</h3>
-              <p class="b-comparison-item__text my-4"><i class="float-left fas fa-laptop fa-4x mr-4 mb-2"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <h3 class="b-comparison-item__title text-center p-2">Pas de priorisaiton possible</h3>
+              <p class="b-comparison-item__text my-4"><i class="float-left fas fa-question fa-4x mr-4 mb-2"></i> Les méthodes classiques comme la cascade constiste à réaliser le projet d'un bloc, à partir d'un cahier des charges intial. Or en numérique il est impossible de construire un cahier des charges parfait, qui réponde parfaitement au besoin du client. On ne peut pas distinguer les fonctionnalités à foret valeure ajoutée, des gadgets coûteux dont on pourrait se passer</p>
         </div>
       </div>
-      <div class="col-4 p-3 s-classic-vs-agile__col--bad">
+      <div class="col-5 p-3 s-classic-vs-agile__col--good">
         <div data-aos-duration=500 data-aos="fade-left" class="w-50 mx-auto b-comparison-item">
-          <h3 class="b-comparison-item__title text-center p-2">Des coûts maitrisés</h3>
-              <p class="b-comparison-item__text my-4"><i class="float-left fas fa-laptop fa-4x mr-4 mb-2"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <h3 class="b-comparison-item__title text-center p-2">L'essentiel est construit en priorité</h3>
+              <p class="b-comparison-item__text my-4"><i class="float-left fas fa-th fa-4x mr-4 mb-2"></i>Les méthodes agiles découpent le projet en petites fonctionnalités indépendantes, auxquelles sont associés une difficulté et une valeur ajouté pour l'objectif à atteindre (vendre des articles, promouvoir un service...). Ainsi il est facile de prioriser leur développement de manière à construire d'abrd le produit répondant vraiment au besoin du  clients. On peut ensuite décider d'inclure les fonctionnalités plus secondaire en fonction de l'évolution du projet, et quand terminer le projet.  </p>
        </div>
       </div>
     </div>
+    <div class="row justify-content-center">
+      <div  class="col-5 p-3 s-classic-vs-agile__col--bad">
+        <div data-aos-duration=500 data-aos="fade-right" class="w-50 mx-auto b-comparison-item">
+          <h3 class="b-comparison-item__title text-center p-2">Un forfait opaque</h3>
+              <p class="b-comparison-item__text my-4"><i class="float-left fas fa-dollar-sign fa-2x mr-4 mb-2"></i><i class="float-left fas fa-dollar-sign fa-2x mr-4 mb-2"></i><i class="float-left fas fa-dollar-sign fa-2x mr-4 mb-2"></i> Réaliser le projet d'un bloc implique une estimation initiale des coûts et/ou un devis forfaitaire opaque pour l'ensmble du projet. Il est alors difficile d'empêcher les coût de s'envoler: comme rien n'est fonctionnel avant la fin du projet, si l'estimation intiale est erronée, on est obligé de payer plus pour que le projet ne tombe pas à l'eau. </p>
+        </div>
+      </div>
+      <div class="col-5 p-3 s-classic-vs-agile__col--good">
+        <div data-aos-duration=500 data-aos="fade-left" class="w-50 mx-auto b-comparison-item">
+          <h3 class="b-comparison-item__title text-center p-2">Des coûts maitrisés</h3>
+              <p class="b-comparison-item__text my-4"><i class="float-left fas fa-file-invoice-dollar fa-4x mr-4 mb-2"></i>Les fonctionnalités les plus importantes sont construite en premier lieu, et 100% fonctionnelle. Il est donc facile de comprendre les coûts du projet, et jusqu'ou l'onsouhaite investir pour améliorer l'existant. Ainsi, on peut garantir la réalisation du minimum nécessaire pour répondre au besoin, et s'arrêter si les coûts ne sembment pas valoir la peine pour la suite.  </p>
+       </div>
+      </div>
+    </div>
+
+
   </div>
 </section>
 
-<section id="sClassicVsAgileCarousel" class="d-md-none carousel slide s-classic-vs-agile-carousel" data data-ride="carousel">
+<section id="sClassicVsAgileCarousel" class="d-md-none carousel slide s-classic-vs-agile-carousel"  data-ride="false">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <div class="row p-3 justify-content-center">
-        <div class="col p-3 s-classic-vs-agile__col--good">
+        <div class="col p-3 s-classic-vs-agile__col--bad">
           <div class="text-center mx-auto b-comparison-item b-comparison-item--mobile">
-            <h3 class="b-comparison-item__title text-center p-2">Des coûts maitrisés</h3>
-                <p class="b-comparison-item__text my-4"><i class="float-left fas fa-laptop fa-4x mr-4 mb-2"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h3 class="b-comparison-item__title text-center p-2">L'effet tunnel</h3>
+                <p class="b-comparison-item__text my-4"><i class="float-left fas fa-eye-slash fa-4x mr-4 mb-2"></i>
+                  Les projets numériques offrent d'innombrables possibilités de fonctionnalités, architectures et design, ce qui entraine un risque important d'effet tunnel. L'effet tunnel apparaît lorsqu'il faut attendre la fin du projet, ou d'un cycle de production long, pour obtenir un élément fonctionnel.
+                Le client ne possède aucune grantie que le rendu final correspondra exactement à ce qu'il avait en tête au départ.</p>
+
 
 
           </div>
@@ -69,10 +95,10 @@
         <div class="w-100 d-md-none">
 
         </div>
-        <div class="col p-3 s-classic-vs-agile__col--bad">
+        <div class="col p-3 s-classic-vs-agile__col--good">
           <div class="text-center mx-auto b-comparison-item b-comparison-item--mobile">
-            <h3 class="b-comparison-item__title text-center p-2">Des coûts maitrisés</h3>
-                <p class="b-comparison-item__text my-4"><i class="float-left fas fa-laptop fa-4x mr-4 mb-2"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h3 class="b-comparison-item__title text-center p-2">Le client au coeur du projet</h3>
+                <p class="b-comparison-item__text my-4"><i class="float-left fas fa-eye fa-4x mr-4 mb-2"></i>Avec les méthodes agiles le client est acteur principal du projet. Des itérations de développement courtes permettent la production régulières de fonctinnalités 100% opérationnelles qui donnent lieues à des démonstratoin. Ainsi le client à un retour très rapide et participe à faire évoluer le plan de production pour obtenir le produit qu'il désire réellement</p>
 
 
           </div>
@@ -81,20 +107,42 @@
     </div>
     <div class="carousel-item">
       <div class="row p-3 justify-content-center">
-        <div class="col p-3 s-classic-vs-agile__col--good">
+        <div class="col p-3 s-classic-vs-agile__col--bad">
           <div class=" text-center mx-auto b-comparison-item b-comparison-item--mobile">
-            <h3 class="b-comparison-item__title text-center p-2">Des coûts maitrisés</h3>
-                <p class="b-comparison-item__text my-4"><i class="float-left fas fa-laptop fa-4x mr-4 mb-2"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <h3 class="b-comparison-item__title text-center p-2">Pas de priorisaiton possible</h3>
+                <p class="b-comparison-item__text my-4"><i class="float-left fas fa-question fa-4x mr-4 mb-2"></i> Les méthodes classiques comme la cascade constiste à réaliser le projet d'un bloc, à partir d'un cahier des charges intial. Or en numérique il est impossible de construire un cahier des charges parfait, qui réponde parfaitement au besoin du client. On ne peut pas distinguer les fonctionnalités à foret valeure ajoutée, des gadgets coûteux dont on pourrait se passer</p>
 
           </div>
         </div>
         <div class="w-100 d-md-none">
 
         </div>
+        <div class="col p-3 s-classic-vs-agile__col--good">
+          <div class="text-center mx-auto b-comparison-item b-comparison-item--mobile">
+            <h3 class="b-comparison-item__title text-center p-2">L'essentiel est construit en priorité</h3>
+                <p class="b-comparison-item__text my-4"><i class="float-left fas fa-th fa-4x mr-4 mb-2"></i>Les méthodes agiles découpent le projet en petites fonctionnalités indépendantes, auxquelles sont associés une difficulté et une valeur ajouté pour l'objectif à atteindre (vendre des articles, promouvoir un service...). Ainsi il est facile de prioriser leur développement de manière à construire d'abrd le produit répondant vraiment au besoin du  clients. On peut ensuite décider d'inclure les fonctionnalités plus secondaire en fonction de l'évolution du projet, et quand terminer le projet.  </p>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row p-3 justify-content-center">
         <div class="col p-3 s-classic-vs-agile__col--bad">
+          <div class=" text-center mx-auto b-comparison-item b-comparison-item--mobile">
+            <h3 class="b-comparison-item__title text-center p-2">Un forfait opaque</h3>
+                <p class="b-comparison-item__text my-4"><i class="float-left fas fa-dollar-sign fa-2x mr-4 mb-2"></i><i class="float-left fas fa-dollar-sign fa-2x mr-4 mb-2"></i><i class="float-left fas fa-dollar-sign fa-2x mr-4 mb-2"></i> Réaliser le projet d'un bloc implique une estimation initiale des coûts et/ou un devis forfaitaire opaque pour l'ensmble du projet. Il est alors difficile d'empêcher les coût de s'envoler: comme rien n'est fonctionnel avant la fin du projet, si l'estimation intiale est erronée, on est obligé de payer plus pour que le projet ne tombe pas à l'eau. </p>
+
+          </div>
+        </div>
+        <div class="w-100 d-md-none">
+
+        </div>
+        <div class="col p-3 s-classic-vs-agile__col--good">
           <div class="text-center mx-auto b-comparison-item b-comparison-item--mobile">
             <h3 class="b-comparison-item__title text-center p-2">Des coûts maitrisés</h3>
-                <p class="b-comparison-item__text my-4"><i class="float-left fas fa-laptop fa-4x mr-4 mb-2"></i>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p class="b-comparison-item__text my-4"><i class="float-left fas fa-file-invoice-dollar fa-4x mr-4 mb-2"></i>Les fonctionnalités les plus importantes sont construite en premier lieu, et 100% fonctionnelle. Il est donc facile de comprendre les coûts du projet, et jusqu'ou l'onsouhaite investir pour améliorer l'existant. Ainsi, on peut garantir la réalisation du minimum nécessaire pour répondre au besoin, et s'arrêter si les coûts ne sembment pas valoir la peine pour la suite.  </p>
 
 
           </div>
@@ -284,32 +332,32 @@
                 <div class="carousel-item active">
                   <div class="row justify-content-center p-5">
                     <div class="col">
-                      {% step "01" "fa-code" "Test" "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure" "orange" %}
+                      {% step "01" "fa-comments" "Réunion de lancement" "Cette réunion consitue la première rencontre avec vous! Elle a pour but de produire une première définition du besoin, à travers une série de question réponse, et tout autre sujet que vous souhaiteriez aborder." "orange" %}
                     </div>
                     <div class="col">
-                      {% step "02" "fa-code" "Test" "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure" "red" %}
+                      {% step "02" "fa-th-list" "Product backlog" "Une première version product backlog et une maquette fonctionnelle vous seront présentés lors d'une deuxième réunion. Ce sera l'occasion d'affiner l'expression du besoin et de créer une première priorisation des users stories."  "red" %}
                     </div>
                     <div class="col">
-                      {% step "03" "fa-code" "Test" "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure" "blue" %}
+                      {% step "03" "fa-calendar-alt" "Premier sprint planning" "Le premier sprint planning permet de décider des fonctionnalités qui seront réalisées lors du prochain sprint qui durera 2 semaines. C'est également l'occasion de préciser les critères d'acceptation de ceratins user stories si besoin. Un sprint planning sera ensuite réalisé avant chaque nouveau sprint." "blue" %}
                     </div>
                     <div class="col">
-                      {% step "04" "fa-code" "Test" "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure" "green" %}
+                      {% step "04" "fa-code" "Sprint" "Durant le sprint, qui durera deux semaines, Soothing Coding réalisera les fonctionnalités discutées durant le sprint planning. Vous pourrez suivre jours après jours l'évolution des différentes tâches techniques, et la durée nécessaire pour réaliser chacune d'elles à travers un outil de gestion de projet mis à votre disposition." "green" %}
                     </div>
                   </div>
                 </div>
                 <div class="carousel-item">
                   <div class="row justify-content-center p-5">
                     <div class="col">
-                      {% step "05" "fa-code" "Test" "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure" "orange" %}
+                      {% step "05" "fa-laptop" "Demonstration" "A la fin de chaque sprint, une démonstration aura lieu pour présenter les fonctionnalités ajoutées lors du sprint précédent, et discuter des éventuelles améliorations à apporter sur la gestion du projet" "orange" %}
                     </div>
                     <div class="col">
-                      {% step "06" "fa-code" "Test" "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure" "red" %}
+                      {% step "06" "fa-users" "Mise en production" "Une fois le projet terminé, une mise en production sera nécessaire pour rendre votre site disponible à tout le monde, à l'adresse souhaitée. Si ce n'est pas déjà fait, nous nous occuperons de réserver un nom de domaine pour vous, ainsi que de mettre en place l'infrastructure pour permettre à votre site d'accueilier le nombre de visiteur souhaité. Il sera alors disponible à l'adresse prévu, et optimisé pour être lu facilement par Google" "red" %}
                     </div>
                     <div class="col">
-                      {% step "07" "fa-code" "Test" "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure" "blue" %}
+                      {% step "07" "fa-chalkboard-teacher" "Formation" "Parallèlement à la mise en production une ou plusieurs séance de formation seront organisés pour vous permettre d'être complètement maître de votre site web. L'objectif est de rappeler le fonctinnement des éléments qui permettent à votre site de fonctionner (serveur, hébergeur, nom de domaines), pour que vous puissiez en maîtriser les coûts. " "blue" %}
                     </div>
                     <div class="col">
-                      {% step "08" "fa-code" "Test" "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure" "green" %}
+                      {% step "08" "fa-wrench" "Maintenance" "Soothing Coding prendra bien sûr en charge la maintenance nécessaire pour résoudre des bugs qui auraient échappés au processus de production, mais également les opératoins de maintenance tels que l'augementation de la capacité du serveur, ou le passage en HTTPS" "green" %}
                     </div>
                   </div>
                 </div>
@@ -324,28 +372,28 @@
             <div id="agileWorkflowStepsMobile" class="d-lg-none b-agile-workflow__steps-mobile carousel slide" data-ride="false" data-interval="false">
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  {% step "01" "fa-code" "Test" "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure" "orange" %}
+                  {% step "01" "fa-comments" "1. Réunion de lancement" "Cette réunion consitue la première rencontre avec vous! Elle a pour but de produire une première définition du besoin, à travers une série de question réponse, et tout autre sujet que vous souhaiteriez aborder." "orange" %}
                 </div>
                 <div class="carousel-item">
-                  {% step "02" "fa-code" "Test" "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure" "red" %}
+                  {% step "02" "fa-th-list" "2. Product backlog" "Une première version product backlog et une maquette fonctionnelle vous seront présentés lors d'une deuxième réunion. Ce sera l'occasion d'affiner l'expression du besoin et de créer une première priorisation des users stories."  "red" %}
                 </div>
                 <div class="carousel-item">
-                  {% step "03" "fa-code" "Test" "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure" "blue" %}
+                  {% step "03" "fa-calendar-alt" "3. Premier sprint planning" "Le premier sprint planning permet de décider des fonctionnalités qui seront réalisées lors du prochain sprint qui durera 2 semaines. C'est également l'occasion de préciser les critères d'acceptation de ceratins user stories si besoin. Un sprint planning sera ensuite réalisé avant chaque nouveau sprint." "blue" %}
                 </div>
                 <div class="carousel-item">
-                  {% step "04" "fa-code" "Test" "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure" "green" %}
+                  {% step "04" "fa-code" "4. Sprint" " Durant le sprint, qui durera deux semaines, Soothing Coding réalisera les fonctionnalités discutées durant le sprint planning. Vous pourrez suivre jours après jours l'évolution des différentes tâches techniques, et la durée nécessaire pour réaliser chacune d'elles à travers un outil de gestion de projet mis à votre disposition." "green" %}
                 </div>
                 <div class="carousel-item">
-                  {% step "05" "fa-code" "Test" "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure" "orange" %}
+                  {% step "05" "fa-laptop" "5. Demonstration" "A la fin de chaque sprint, une démonstration aura lieu pour présenter les fonctionnalités ajoutées lors du sprint précédent, et discuter des éventuelles améliorations à apporter sur la gestion du projet" "orange" %}
                 </div>
                 <div class="carousel-item">
-                  {% step "06" "fa-code" "Test" "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure" "red" %}
+                  {% step "06" "fa-users" "6. Mise en production" "Une fois le projet terminé, une mise en production sera nécessaire pour rendre votre site disponible à tout le monde, à l'adresse souhaitée. Si ce n'est pas déjà fait, nous nous occuperons de réserver un nom de domaine pour vous, ainsi que de mettre en place l'infrastructure pour permettre à votre site d'accueilier le nombre de visiteur souhaité. Il sera alors disponible à l'adresse prévu, et optimisé pour être lu facilement par Google" "red" %}
                 </div>
                 <div class="carousel-item">
-                  {% step "07" "fa-code" "Test" "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure" "blue" %}
+                  {% step "07" "fa-chalkboard-teacher" "7. Formation" "Parallèlement à la mise en production une ou plusieurs séance de formation seront organisés pour vous permettre d'être complètement maître de votre site web. L'objectif est de rappeler le fonctinnement des éléments qui permettent à votre site de fonctionner (serveur, hébergeur, nom de domaines), pour que vous puissiez en maîtriser les coûts. " "blue" %}
                 </div>
                 <div class="carousel-item">
-                  {% step "08" "fa-code" "Test" "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure" "green" %}
+                  {% step "08" "fa-wrench" "8. Maintenance" "Soothing Coding prendra bien sûr en charge la maintenance nécessaire pour résoudre des bugs qui auraient échappés au processus de production, mais également les opératoins de maintenance tels que l'augementation de la capacité du serveur, ou le passage en HTTPS" "green" %}
                 </div>
               </div>
               <a class="carousel-control-prev b-agile-workflow___steps-prev-control" href="#agileWorkflowStepsMobile" role="button" data-slide="prev">

@@ -50,3 +50,8 @@ def value_service(icon, title, text):
         'title': title,
         'text': text
     }
+
+
+@register.inclusion_tag('main/blocks/b-footer.html')
+def footer():
+    pass

@@ -24,10 +24,10 @@
 
 
 .b-cta--outlined .b-cta__button{
-  color: $main-blue;
+  color: $secondary-blue;
   background-color: white;
-  border: solid 1px;
-  border-color: $main-blue;
+  border: solid 3px;
+  border-color: $secondary-blue;
 }
 
 .b-cta--outlined .b-cta__button:hover, .b-cta--outlined .b-cta__button:active, .b-cta--outlined .b-cta__button:focus {

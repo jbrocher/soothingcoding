@@ -1,6 +1,7 @@
 {% load cms_tags menu_tags sekizai_tags %}
 {% load static %}
 {% load pipeline %}
+{% load blocks %}
 <!doctype html>
 <html>
     <head>
@@ -21,18 +22,20 @@
         <!-- Plugin CSS -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <!-- Custom styles for this template -->
-        <link href="{% static "css/custom.css" %}" rel="stylesheet">
 
         {% stylesheet 'main' %}
 
         {% render_block "css" %}
     </head>
-    <body class="bg-light" id="page-top">
+    <body class="bg-light pr-0" id="page-top">
         {% cms_toolbar %}
+        {% show_menu 0 100 100 100 "menu/menu.html"%}
+
         <div class="container-fluid">
-          {% show_menu 0 100 100 100 "menu/menu.html"%}
           {% block content %}
           {% endblock content %}
+          {% footer %}
+
         </div>
         <!-- Bootstrap core JavaScript -->
         <script src="{% static "vendor/jquery/jquery.min.js" %}"></script>
@@ -48,7 +51,5 @@
         <script src="{% static "js/custom.js" %}"></script>
         {% render_block "js" %}
         {% javascript 'main' %}
-
-
     </body>
 </html>

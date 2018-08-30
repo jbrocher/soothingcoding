@@ -3,66 +3,52 @@
 {% load static %}
 {% load blocks %}
 {% block content %}
-<header  data-parallax='scroll' data-speed=0.5 data-image-src = "{% static 'img/header.jpg' %}" class="parallax-window masthead text-center slow-scroll text-white d-flex s-header">
-  <div class="container my-auto">
-    <div class="row">
-      <div class="col">
-        <div class="b-h1">
-          <div class="row mx-auto">
-            <div class="col">
-                <h1 class="b-h1__title text-uppercase">
-                  <strong>Soothing Coding</strong>
-                </h1>
-                <hr class="b-separator">
-            </div>
+<header data-parallax='scroll' data-speed=0.5 data-image-src = "{% static 'img/header.jpg' %}" class="b-hero__img parallax-window masthead mb-5 s-header">
+      <div class="row">
+        <div class="col">
+          <div class="b-h1 text-center">
+            <h1 class="b-h1__title text-uppercase">
+              <strong>Soothing Coding</strong>
+            </h1>
+            <hr class="b-separator">
           </div>
-          <div class="row">
-            <div class="col">
+          <div class="text-center">
               <h4 class="b-h1__slogan mb-5"> Entre une idée et un site web il n'y a qu'un pas</h4>
               <h4 class="b-h1__slogan mb-5"> Soothing coding vous aide à le franchir sereinement</h4>
-            </div>
           </div>
-          <div class="row justify-content-center">
-            <div class="col-md-6 col-lg-4">
+          <div class="text-center" >
               {% cta 'Démarrer mon projet' 'b-cta--big' '/fr/contact'%}
-            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-        <div class="col mx-4 text-center">
-          {% value_service "fa-pen" "Conception" "Nous vous accompagnons dans l'expression de votre besoin" %}
-        </div>
-        <div class=" mx-4 col text-center">
-          {% value_service "fa-code" "Réalisation" "Développement de votre site à l'aide des technologies les plus récentes" %}
-        </div>
-        <div class="mx-4 col text-center">
-          {% value_service "fa-laptop" "Formation" "Restez maîtres de votre projet" %}
-        </div>
-    </div>
-  </div>
+        <div class="row">
+          <div class="col mx-4 text-center">
+            {% value_service "fa-pen" "Conception" "Nous vous accompagnons dans l'expression de votre besoin" %}
+          </div>
+          <div class=" mx-4 col text-center">
+            {% value_service "fa-code" "Réalisation" "Développement de votre site à l'aide des technologies les plus récentes" %}
+          </div>
+          <div class="mx-4 col text-center">
+            {% value_service "fa-laptop" "Formation" "Restez maîtres de votre projet" %}
+          </div>
+      </div>
 </header>
-  <section class="container-fluid services">
-  <div class="row mb-5 justify-content-center">
-    <div class="col-auto">
+<section class="services parallax-window mt-5" data-parallax="scroll" data-image-src="{% static 'img/services-2.jpg' %}" data-speed="0.5" >
+  <div class="row  p-4">
+    <div class="col">
       <div class="b-h2">
         <div class="row mx-auto">
           <div class="col">
-            <h2 class="b-h2__title text-uppercase mt-5">Prestations</h2>
+            <h2 class="b-h2__title text-uppercase text-center mt-5">Prestations</h2>
               <hr class="b-separator">
           </div>
         </div>
       </div>
-    </div>
-  </div>
-  <div class="row  p-4 parallax-window" data-parallax="scroll" data-image-src="{% static 'img/services-2.jpg' %}" data-speed="0.5" >
-    <div class="col">
       <div class="card-group my-4">
         <div class="card mx-4 b-service-card">
-          <div class="row">
+          <div class="row h-100">
             <div class="col">
-              <img class="card-img-top" src="{% static '/img/vitrine.jpg' %}" alt="Site Vitrine - Designed by freepik">
+              <img class="card-img-top w-100 h-100" src="{% static '/img/vitrine.jpg' %}" alt="Site Vitrine - Designed by freepik">
             </div>
             <div class="w-100 d-md-none"></div>
 
@@ -78,9 +64,9 @@
           </div>
         </div>
         <div class="card mx-4 b-service-card">
-          <div class="row">
+          <div class="row h-100">
             <div class="col">
-              <img class="card-img-top" src="{% static "img/e-commerce.jpg" %}" alt="Site Vitrine">
+              <img class="card-img-top w-100 h-100" src="{% static "img/e-commerce.jpg" %}" alt="Site Vitrine">
             </div>
             <div class="w-100 d-md-none"></div>
             <div class="col">
@@ -97,9 +83,9 @@
       </div>
       <div class="my-4 card-group">
         <div class="card mx-4 b-service-card">
-          <div class="row">
+          <div class="row h-100">
             <div class="col">
-              <img class="card-img-top" src="{% static "img/fix.jpg" %}" alt="Site Vitrine">
+              <img class="card-img-top w-100 h-100" src="{% static "img/fix.jpg" %}" alt="Site Vitrine">
             </div>
             <div class="w-100 d-md-none"></div>
 
@@ -115,9 +101,9 @@
           </div>
         </div>
         <div class="card mx-4 b-service-card">
-          <div class="row">
+          <div class="row h-100">
             <div class="col">
-              <img class="card-img-top" src="{% static "img/seo.jpg" %}" alt="Site Vitrine">
+              <img class="card-img-top w-100 h-100" src="{% static "img/seo.jpg" %}" alt="Site Vitrine">
             </div>
             <div class="w-100 d-md-none"></div>
 
@@ -135,7 +121,7 @@
     </div>
     </div>
 </div>
-<div class="modal fade modal-details"  tabindex="-1" role="dialog" aria-labelledby="modal-details__label" aria-hidden="true">
+<div class="modal fade modal-details p-0"  tabindex="-1" role="dialog" aria-labelledby="modal-details__label" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg"  role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -145,7 +131,6 @@
         </button>
       </div>
       <div class="modal-body">
-        <div class="container-fluid">
           <div class="row">
             <div class="col">
               <p class="modal-details__value"></p>
@@ -168,47 +153,28 @@
               </ul>
             </div>
           </div>
-        </div>
       </div>
       <div class="modal-footer">
-        <div class="container">
-          <div class="row justify-content-around">
-            <div class="col-auto">
-              {% cta "Close" "b-cta--lg b-cta--grey" "#" %}
-            </div>
-            <div class="w-100 d-sm-none"></div>
+          <div class="w-100 row justify-content-center">
             <div class="col-auto">
               {% cta "Commencer mon projet !" "b-cta--lg" "/fr/contact" %}
             </div>
           </div>
-        </div>
       </div>
     </div>
   </div>
 </div>
 </section>
-<section class="s-articles">
-  <div class="row justify-content-center">
-    <div class="col-auto">
-      <div class="b-h2">
-        <div class="row mx-auto">
-          <div class="col">
-            <h2 class="b-h2__title text-uppercase mt-5">Informations</h2>
-              <hr class="b-separator">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row" data-aos="fade-right" >
+<section class="py-5 s-articles">
+  <div class="row" data-aos="slide-right" data-aos-duration="500" >
     <div class="col">
         <div class="b-article-preview">
           <div class="row">
             <div class="col-lg-3">
-                <img class="mr-3 w-100" src="{% static 'img/project-management.jpg' %}" alt="Generic placeholder image">
+                <img class="mr-3 h-100 w-100" src="{% static 'img/project-management.jpg' %}" alt="Generic placeholder image">
             </div>
             <div class="w-100 d-lg-none"></div>
-            <div  class="col">
+            <div  class="col pl-4 pl-lg-0 b-article__content">
                 <div class="row article_summary">
                   <div class="col">
                     <h3 class="mt-1">Méthodologie</h3>
@@ -236,41 +202,13 @@
 
                   </div>
                   <div class="col col-sm-4 text-center my-auto">
-                    {% cta "En savoir plus" "" "/fr/methodology" %}
+                    {% cta "En savoir plus" "b-cta--outlined" "/fr/methodology" %}
                   </div>
                 </div>
             </div>
           </div>
         </div>
       </div>
-  </div>
-  <div data-aos="fade-right" data-aos-offset="200" data-aos-duration="500" class="row">
-    <div class="col">
-      <div class="mt-5 b-article-preview">
-        <div class="row">
-          <div class="col-lg-3">
-              <img class="mr-3 w-100" src="{% static 'img/comment-internet.jpg' %}" alt="Generic placeholder image">
-          </div>
-          <div class="w-100 d-lg-none"></div>
-          <div  class="col">
-            <div class="row article_summary">
-              <div class="col">
-                <h3 class="mt-1">Comment marche mon site web ? </h3>
-
-                La philosophie de Soothing Coding consiste à placer le client au coeur du projet, afin qui puisse être maître de l'évolution de son site web. De ce fait, il est bon de comprendre quel sont les différents éléments qui permettent à un site de fonctionner.
-                Du serveur au nom de domaine, en passant par le code source, pour tout savoir sur le fonctionnement d'internet, c'est par ici !
-              </div>
-
-            </div>
-            <div class="row mt-4 p-3">
-              <div class="col text-center my-auto">
-              {% cta "En savoir plus" "" "#" %}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 {% endblock %}

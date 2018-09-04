@@ -137,6 +137,7 @@ TEMPLATES = [
 
 
 MIDDLEWARE = (
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'cms.middleware.utils.ApphookReloadMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -248,7 +249,7 @@ DATABASES = {
 }
 # Setting up django-heroku
 
-# django_heroku.settings(locals())
+django_heroku.settings(locals(), staticfiles=False)
 
 # Cache
 

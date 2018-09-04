@@ -26,3 +26,4 @@ class Potential(models.Model):
     contact_name = models.CharField(max_length=255)
     contact_company = models.CharField(max_length=255)
     contact_desc = models.TextField()
+    dt_contact = models.DateField(auto_now_add=True)

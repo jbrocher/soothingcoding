@@ -1,4 +1,6 @@
 import os  # isort:skip
+from decouple import config
+
 gettext = lambda s: s
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
 """
@@ -24,7 +26,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = config('SECRET_KEY')
 
 CSRF_COOKIE_SECURE = True
 SESSION_COOKIE_SECURE = True
@@ -64,7 +66,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(DATA_DIR, 'media')
 STATIC_ROOT = os.path.join(DATA_DIR, 'staticfiles')
 
-STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
+STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
 
 PIPELINE = {
     'CSS_COMPRESSOR': 'pipeline.compressors.cssmin.CSSMinCompressor',
@@ -79,7 +81,7 @@ PIPELINE = {
                 'main/blocks/*.js',
                 'contact-form/b-contact-form.js'
             ),
-            'output_filename': 'blocks.min.js',
+            'output_filename': 'compiled/blocks.js',
         }
     },
     'STYLESHEETS': {
@@ -88,13 +90,21 @@ PIPELINE = {
                 'main/blocks/style.scss',
                 'contact-form/b-contact-form.scss'
             ),
-            'output_filename': 'blocks.min.css',
+            'output_filename': 'compiled/blocks.css',
         }
     }
 }
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'main', 'static'),
 )
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'pipeline.finders.PipelineFinder',
+)
+
+
 SITE_ID = 1
 
 
@@ -139,7 +149,6 @@ MIDDLEWARE = (
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
     'cms.middleware.language.LanguageCookieMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 
 )
 
@@ -225,21 +234,21 @@ THUMBNAIL_PROCESSORS = (
 
 """Set sensitive variable from environment"""
 # debug
-DEBUG = os.environ.get('DEBUG')
+DEBUG = config('DEBUG', default=False, cast=bool)
 # postgresql settings
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME'),
-        'USER': os.environ.get('DB_USER'),
-        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
         'HOST': 'localhost',
         'PORT': '',
     }
 }
 # Setting up django-heroku
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals())
 
 # Cache
 

@@ -35,6 +35,7 @@ cssmin = "*"
 libsasscompiler = "*"
 slimit = "*"
 whitenoise = "*"
+python-decouple = "*"
 
 
 [dev-packages]

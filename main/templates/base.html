@@ -24,6 +24,8 @@
         <!-- Custom styles for this template -->
 
         {% stylesheet 'main' %}
+
+        {% render_block "css" %}
     </head>
     <body class="bg-light pr-0" id="page-top">
         {% cms_toolbar %}
@@ -47,6 +49,7 @@
         <script src="{% static "js/modal-details.js" %}"></script>
         <script src="{% static "js/parallax.js" %}"></script>
         <script src="{% static "js/custom.js" %}"></script>
+        {% render_block "js" %}
         {% javascript 'main' %}
     </body>
 </html>

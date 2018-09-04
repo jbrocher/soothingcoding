@@ -12,7 +12,7 @@
         <div class="form-group my-3">
           <i class="far fa-question-circle" data-toggle="tooltip" data-html="true" title="Si vous n'êtes pas certains du type de projet qui vous correspond, choisissez <i>Autre</i> et soothing coding vous aidera à le définir !" data-position="left"></i>
           <label class="mb-3 d-inline" >Pour commencer, choisissez un type de projet :</label>
-          <div class="row mt-2 no-gutters">
+          <div class="row b-contact-form__project-type mt-2 no-gutters">
             {% for radio in form.project_type %}
             <div class="col-auto m-1">
                 <label  class ="b-contact-form__radio-label" for="{{ radio.id_for_label }}">
@@ -86,7 +86,7 @@
         </div>
         <div class="modal-body">
           <h3 class="text-center">Féliciations vous avez franchie la toute première étape de votre projet !</h3>
-          <p>Votre demande de projet a bien été prise en compte, et un mail de confirmation vous a été envoyé à l'adresse mail renseignée dans le formulaire. Ce mail contient également un résumé des prochaines étapes et une checklist "Project kickoff". Soothing Coding reviens vers vous dans les plus bref délais pour la suite !</p>
+          <p>Votre demande de projet a bien été prise en compte, et vous recevrez prochainement un mai à l'adresse renseignée dans le formulaire. Ce mail contient également un résumé des prochaines étapes et une checklist "Project kickoff". Soothing Coding reviens vers vous dans les plus bref délais pour la suite !</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

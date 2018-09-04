@@ -1,4 +1,4 @@
-from django.http import HttpResponseRedirect, JsonResponse
+from django.http import HttpResponseRedirect, JsonResponse, HttpResponseNotFound
 from django.shortcuts import render
 
 from contact_form.forms import PotentialForm
@@ -25,3 +25,5 @@ def new_potential(request):
             response = dict(form.errors)
             response['status'] = 400
             return JsonResponse(form.errors)
+    else:
+        return HttpResponseNotFound('<h1> Page not foudn </h1>')

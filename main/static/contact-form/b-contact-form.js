@@ -42,8 +42,9 @@ $(document).ready(function () {
 
   $('.b-contact-form__radio').on('click', function(e){
     e.preventDefault()
+    $('.b-contact-form__project-type').find('.b-contact-form__radio').removeClass('b-button--clicked')
     $(this).addClass('b-button--clicked')
-    $(this).parent().parent().find('.b-contact-form__radio').removeClass('b-button--clicked')
+
     $(this).parent().trigger('click')
   })
 

@@ -11,7 +11,7 @@
   border-radius: 5px;
 }
 
-.b-button:hover, .b-button:active, .b-button:focus, .b-button--cliked {
+.b-button:hover, .b-button:active, .b-button:focus, .b-button--clicked {
   background-color: $secondary-blue;
   border: solid 3px $secondary-grey;
   outline:none;

@@ -16,14 +16,10 @@ admin.autodiscover()
 urlpatterns = [
     url(r'^sitemap\.xml$', sitemap,
         {'sitemaps': {'cmspages': CMSSitemap}}),
-]
-
-urlpatterns += i18n_patterns(
     url(r'^admin/', include(admin.site.urls)),  # NOQA
     url(r'^', include('cms.urls')),
-    url(r'^', include('contact_form.urls', namespace="contact_form"))
-
-)
+    url('', include('contact_form.urls', namespace="contact_form"))
+]
 
 # This is only needed when using runserver.
 if settings.DEBUG:

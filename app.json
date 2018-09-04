@@ -3,10 +3,10 @@
   "scripts": {},
   "env": {
     "DEBUG": {
-      "value": "false"
+      "required": "true"
     },
-    "STATICFILES_STORAGE": {
-      "value": "django.contrib.staticfiles.storage.ManifestStaticFilesStorage"
+    "SECRET_KEY": {
+      "required": "true"
     }
   },
   "formation": {

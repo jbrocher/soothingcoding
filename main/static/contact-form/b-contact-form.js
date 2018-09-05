@@ -18,6 +18,10 @@ function getCookie (name) {
   return cookieValue
 }
 
+$('#successModal').on('hidden.bs.modal', function (e) {
+  location.reload();
+
+})
 // this is the id of the form
 $(document).ready(function () {
   $('#contactForm').submit(function (e) {

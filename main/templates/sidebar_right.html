@@ -2,7 +2,10 @@
 {% load cms_tags %}
 {% load static %}
 
-{% block title %}{% page_attribute "page_title" %}{% endblock title %}
+{% block 'metadesc' %}
+<meta name="description" content="Contactez nous pour tout nos projets web. Soothing Coding est basé à Lyon, mais nous prenons en charge votre projet où que vous soyez !">
+
+{% endblock %}
 
 {% block content %}
   <header class="bg-light">

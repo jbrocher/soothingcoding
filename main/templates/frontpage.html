@@ -2,6 +2,12 @@
 {% load cms_tags %}
 {% load static %}
 {% load blocks %}
+
+{% block 'metadesc' %}
+<meta name="description" content="Développement de sites web sur mesure. Grâce à une gestion de projet agile, Soothing Coding accompagne dans la réalistion de votre projet. Devenez maître de votre présence sur le web ! ">
+
+{% endblock %}
+
 {% block content %}
 <header data-parallax='scroll' data-speed=0.5 data-image-src = "{% static 'img/header.jpg' %}" class="b-hero__img parallax-window masthead mb-5 s-header">
       <div class="row">
@@ -39,7 +45,7 @@
       <div class="b-h2">
         <div class="row mx-auto">
           <div class="col">
-            <h2 class="b-h2__title text-uppercase text-center mt-5">Prestations</h2>
+            <h2 class="b-h2__title text-uppercase text-center mt-5">Nos prestations en développement web</h2>
               <hr class="b-separator">
           </div>
         </div>
@@ -48,7 +54,7 @@
         <div class="card mx-4 b-service-card">
           <div class="row h-100">
             <div class="col">
-              <img class="card-img-top w-100 h-100" src="{% static 'img/vitrine.jpg' %}" alt="Site Vitrine - Designed by freepik">
+              <img class="card-img-top w-100 h-100" src="{% static 'img/vitrine.jpg' %}" alt="Développement de Site Vitrine">
             </div>
             <div class="w-100 d-md-none"></div>
 
@@ -66,7 +72,7 @@
         <div class="card mx-4 b-service-card">
           <div class="row h-100">
             <div class="col">
-              <img class="card-img-top w-100 h-100" src="{% static "img/e-commerce.jpg" %}" alt="Site Vitrine">
+              <img class="card-img-top w-100 h-100" src="{% static "img/e-commerce.jpg" %}" alt="Développement E-commerce">
             </div>
             <div class="w-100 d-md-none"></div>
             <div class="col">
@@ -85,7 +91,7 @@
         <div class="card mx-4 b-service-card">
           <div class="row h-100">
             <div class="col">
-              <img class="card-img-top w-100 h-100" src="{% static "img/fix.jpg" %}" alt="Site Vitrine">
+              <img class="card-img-top w-100 h-100" src="{% static "img/fix.jpg" %}" alt="Développement - Maintenance">
             </div>
             <div class="w-100 d-md-none"></div>
 
@@ -103,7 +109,7 @@
         <div class="card mx-4 b-service-card">
           <div class="row h-100">
             <div class="col">
-              <img class="card-img-top w-100 h-100" src="{% static "img/seo.jpg" %}" alt="Site Vitrine">
+              <img class="card-img-top w-100 h-100" src="{% static "img/seo.jpg" %}" alt="Développement - SEO">
             </div>
             <div class="w-100 d-md-none"></div>
 
@@ -171,7 +177,7 @@
         <div class="b-article-preview">
           <div class="row">
             <div class="col-lg-3">
-                <img class="mr-3 h-100 w-100" src="{% static 'img/project-management.jpg' %}" alt="Generic placeholder image">
+                <img class="mr-3 h-100 w-100" src="{% static 'img/project-management.jpg' %}" alt="Gestion de projet web">
             </div>
             <div class="w-100 d-lg-none"></div>
             <div  class="col pl-4 pl-lg-0 b-article__content">

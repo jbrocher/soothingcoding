@@ -17,6 +17,8 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 import django_heroku
+from dj_database_url import parse as db_url
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -238,18 +240,13 @@ THUMBNAIL_PROCESSORS = (
 DEBUG = config('DEBUG', default=False, cast=bool)
 # postgresql settings
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('NAME'),
-        'USER': config('USER'),
-        'PASSWORD': config('PASSWORD'),
-        'HOST': 'localhost',
-        'PORT': '',
-    }
+
+    'default': config('DATABASE_URL', cast=db_url)  # Return the db diciotnnary
+
 }
 # Setting up django-heroku
 
-django_heroku.settings(locals(), staticfiles=False)
+# django_heroku.settings(locals(), staticfiles=False)
 
 # Cache
 

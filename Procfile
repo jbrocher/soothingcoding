@@ -1,2 +1,2 @@
-release: python manage.py migrate --no-input
+release: bash seed.sh
 web: gunicorn main.wsgi

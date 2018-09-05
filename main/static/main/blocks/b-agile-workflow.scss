@@ -1,0 +1,33 @@
+.b-agile-workflow {
+  background-color: $secondary-grey;
+}
+
+.b-agile-workflow__row {
+  margin-bottom: 200px;
+}
+
+.b-agile-workflow__illustration {
+  background-color: $white;
+  border-radius: 5px;
+}
+
+.b-agile-workflow__subtitle {
+  color:$white;
+}
+
+.b-agile-workflow___steps-next-control:after
+{
+  content: '>';
+  font-size: 55px;
+  color: $main-blue;
+}
+
+.b-agile-workflow___steps-prev-control:after {
+  content: '<';
+  font-size: 55px;
+  color: $main-blue;
+}
+
+.b-agile-workflow___steps-next-control, .b-agile-workflow___steps-prev-control {
+  width: 30px;
+}

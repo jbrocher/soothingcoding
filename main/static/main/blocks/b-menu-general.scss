@@ -1,0 +1,40 @@
+
+
+@media (min-width: 768px) {
+  .b-menu-general__links {
+    position:absolute;
+    left:50%;
+    margin-left: -265px;
+    color:$white;
+  }
+
+}
+
+
+
+.b-menu-general {
+  color: $white;
+  background-color: black;
+  min-height: 100px;
+
+}
+
+
+.b-menu-general .nav-item:hover :not(.b-menu-general__btn ) {
+
+}
+
+.b-menu-general__navbar-brand:hover {
+  color:$main-grey ;
+
+}
+.b-menu-general__link, .b-menu-general__navbar-brand{
+  color: $white;
+  font-weight: bolder;
+}
+
+   // .b-menu-general__cta-container{
+   //   position: absolute;
+   //   right: 0px;
+   //   margin-right: 5px;
+   // }

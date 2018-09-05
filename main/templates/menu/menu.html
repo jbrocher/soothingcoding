@@ -1,0 +1,24 @@
+{% load menu_tags %}
+{% load blocks %}
+  <nav class="b-menu-general fixed-top navbar navbar-expand-md pr-0">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#b-menu-general__collapse" aria-controls="b-menu-general__collapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="fas fa-bars text-white"></span>
+    </button>
+      <a class="b-menu-general__navbar-brand navbar-brand" alt="Homepage" href="/">Soothing Coding</a>
+      <div class="collapse  navbar-collapse mr-auto" id="b-menu-general__collapse">
+          <ul class="b-menu-general__links navbar-nav">
+          {% for child in children %}
+              <li class="nav-item mx-md-5 {% if child.selected %}selected{% endif %}{% if child.ancestor %}ancestor{% endif %}{% if child.sibling %}sibling{% endif %}{% if child.descendant %}descendant{% endif %}">
+                <a class="b-menu-general--border nav-link b-menu-general__link" alt="{{ child.get_menu_title }}" href="{{ child.get_absolute_url }}">{{ child.get_menu_title }}</a>
+                {% if child.children %}
+                  {% show_menu from_level to_level extra_inactive extra_active template "" "" child %}
+                {% endif %}
+              </li>
+          {% endfor %}
+
+          </ul>
+        </div>
+        <div class="align-middle d-none d-md-inline-block b-menu-general__cta-container mr-2">
+          {% cta 'Lancer mon projet' 'b-cta--outlined' '/contact'%}
+        </div>
+  </nav>

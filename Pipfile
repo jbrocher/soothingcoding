@@ -30,6 +30,13 @@ django-sekizai = ">=0.9"
 heroku = "*"
 django-heroku = "*"
 gunicorn = "*"
+django-pipeline = "*"
+cssmin = "*"
+libsasscompiler = "*"
+slimit = "*"
+whitenoise = "*"
+python-decouple = "*"
+dj-database-url = "*"
 
 
 [dev-packages]

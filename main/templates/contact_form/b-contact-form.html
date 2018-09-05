@@ -1,0 +1,95 @@
+{% load sekizai_tags %}
+{% load static %}
+{% load blocks %}
+
+<div class="b-contact-form">
+  <form class="contact-form bg-white p-2 border rounded" id="contactForm" action="{% url 'contact_form:new_potential' %}" method="post">
+    {% csrf_token %}
+
+    <div class="row b-contact-form__above">
+      <div class="col py-2">
+        <h2 class="mb-3 text-center">Votre projet</h2>
+        <div class="form-group my-3">
+          <i class="far fa-question-circle" data-toggle="tooltip" data-html="true" title="Si vous n'êtes pas certains du type de projet qui vous correspond, choisissez <i>Autre</i> et soothing coding vous aidera à le définir !" data-position="left"></i>
+          <label class="mb-3 d-inline" >Pour commencer, choisissez un type de projet :</label>
+          <div class="row b-contact-form__project-type mt-2 no-gutters">
+            {% for radio in form.project_type %}
+            <div class="col-auto m-1">
+                <label  class ="b-contact-form__radio-label" for="{{ radio.id_for_label }}">
+                  {% button radio.choice_label "b-contact-form__radio"%}
+                   {{ radio.tag }}
+                </label>
+            </div>
+            {% endfor %}
+          </div>
+            {{ form.project_type.errors }}
+        </div>
+        <div class="form-group">
+          {{ form.project_desc.errors }}
+          <i class="far fa-question-circle" data-toggle="tooltip" data-html="true" title="Une courte description de votre projet. Expliquez par exemple quel résultat vous souhaitez obtenir grâce à votre site !" data-position="left"></i>
+          <label class="d-inline-block" for="{{ form.project_desc.id_for_label }}">Description de votre projet</label>
+          <textarea required class="form-control" name="{{ form.project_desc.html_name }}" id="{{ form.project_desc.id_for_label }}" value=""></textarea>
+          {# {{ form.project_desc}}#}
+        </div>
+      </div>
+    </div>
+    <div class="row collapse" id="contact-form__contact-info">
+      <div class="col py-3">
+        <h2 class="mb-3 text-center">information de contact</h2>
+        <div class="form-group">
+          {{ form.contact_name.errors }}
+          <i class="far fa-question-circle" data-toggle="tooltip" data-html="true" title="Le nom du contact pour le projet" data-position="left"></i>
+          <label for="{{ form.contact_name.id_for_label }}">Nom du contact</label>
+          {{ form.contact_name }}
+        </div>
+        <div class="form-group">
+          {{ form.contact_email.errors }}
+          <i class="far fa-question-circle" data-toggle="tooltip" data-html="true" title="Votre mail ne sera utilisé que dans le cadre du projet. Vous pouvez demander à tout moment la supression de votre email en envoyant un mail à <a href='mailto:soothingcoding@gmail.com'>soothingcoding@gmail.com</a>" data-trigger="click hover focus" data-position="left"></i>
+          <label for="{{ form.contact_email.id_for_label }}">Mail de contact</label>
+          {{ form.contact_email }}
+        </div>
+        <div class="form-group">
+          {{ form.contact_company.errors }}
+          <i class="far fa-question-circle" data-toggle="tooltip" data-html="true" title="Le nom de votre entreprise le cas échéant. Si vous n'êtes pas un professionnel, laisser vide." data-position="left"></i>
+          <label for="{{ form.contact_company.id_for_label }}">Nom de l'entreprise</label>
+          {{ form.contact_company }}
+        </div>
+        <div class="form-group">
+          {{ form.contact_desc.errors }}
+          <i class="far fa-question-circle" data-toggle="tooltip" data-html="true" title="Une courte de description de votre activité le cas échéant. Si vous n'êtes pas un professionnel, laisser vide." data-position="left"></i>
+          <label for="{{ form.contact_desc.id_for_label }}">Description de votre activité</label>
+          {{ form.contact_desc }}
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-4">
+            <input type="submit" id="contactFormSubmit" class="b-cta btn btn-block btn-primary" value="Submit"/>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <a href="#"><i data-toggle="collapse" class="b-contact-form__collapse-toggle fas fa-2x fa-angle-down" data-target="#contact-form__contact-info" aria-expanded="false" aria-controls="collapseExample"></i></a>
+      </div>
+    </div>
+  </form>
+  <!-- Modal -->
+  <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="succesModalTitle">Première étape franchie !</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h3 class="text-center">Féliciations vous avez franchie la toute première étape de votre projet !</h3>
+          <p>Votre demande de projet a bien été prise en compte, Soothing Coding reviens vers vous dans les plus bref délais pour la suite !</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

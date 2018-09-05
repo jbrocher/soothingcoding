@@ -1,0 +1,19 @@
+.b-button {
+  background-color: #99D3DF;
+  border:None;
+  color: #FFF;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
+  cursor: pointer;
+  height: 40px;
+  width: 150px;
+  border-radius: 5px;
+}
+
+.b-button:hover, .b-button:active, .b-button:focus, .b-button--clicked {
+  background-color: $secondary-blue;
+  border: solid 3px $secondary-grey;
+  outline:none;
+
+}

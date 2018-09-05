@@ -1,0 +1,24 @@
+.b-header {
+
+}
+
+.b-header__title {
+  color:$white;
+  font-size: 2em;
+}
+
+@media (min-width: 768px) {
+
+  .b-header__title {
+    font-size: 2.5em;
+
+  }
+}
+
+.b-header__img-container {
+  background-image: url('/static/img/header.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 50px;
+}

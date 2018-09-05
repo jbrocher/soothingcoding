@@ -1,4 +1,6 @@
 import os  # isort:skip
+from decouple import config
+
 gettext = lambda s: s
 DATA_DIR = os.path.dirname(os.path.dirname(__file__))
 """
@@ -15,6 +17,8 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 
 import os
 import django_heroku
+from dj_database_url import parse as db_url
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -24,10 +28,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '39s0)^-g2&j-(s@hp@94#4!eh7dq+-9(f_fvlta$mdf)us=6i%'
+SECRET_KEY = config('SECRET_KEY')
 
-
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -78,7 +81,7 @@ PIPELINE = {
                 'main/blocks/*.js',
                 'contact-form/b-contact-form.js'
             ),
-            'output_filename': 'blocks.min.js',
+            'output_filename': 'compiled/blocks.js',
         }
     },
     'STYLESHEETS': {
@@ -87,13 +90,21 @@ PIPELINE = {
                 'main/blocks/style.scss',
                 'contact-form/b-contact-form.scss'
             ),
-            'output_filename': 'blocks.min.css',
+            'output_filename': 'compiled/blocks.css',
         }
     }
 }
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'main', 'static'),
 )
+
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'pipeline.finders.PipelineFinder',
+)
+
+
 SITE_ID = 1
 
 
@@ -126,6 +137,7 @@ TEMPLATES = [
 
 
 MIDDLEWARE = (
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'cms.middleware.utils.ApphookReloadMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -137,7 +149,8 @@ MIDDLEWARE = (
     'cms.middleware.user.CurrentUserMiddleware',
     'cms.middleware.page.CurrentPageMiddleware',
     'cms.middleware.toolbar.ToolbarMiddleware',
-    'cms.middleware.language.LanguageCookieMiddleware'
+    'cms.middleware.language.LanguageCookieMiddleware',
+
 )
 
 INSTALLED_APPS = (
@@ -222,24 +235,37 @@ THUMBNAIL_PROCESSORS = (
 
 """Set sensitive variable from environment"""
 # debug
-DEBUG = os.environ.get('DEBUG')
+DEBUG = config('DEBUG', default=False, cast=bool)
 # postgresql settings
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.environ.get('DB_NAME'),
-        'USER': os.environ.get('DB_USER'),
-        'PASSWORD': os.environ.get('DB_PASSWORD'),
-        'HOST': 'localhost',
-        'PORT': '',
-    }
+
+    'default': config('DATABASE_URL', cast=db_url)  # Return the db diciotnnary
+
 }
 # Setting up django-heroku
 
-django_heroku.settings(locals())
+# django_heroku.settings(locals(), staticfiles=False)
 
-# env
+# Cache
 
 CMS_PAGE_CACHE = False
 CMS_PLACEHOLDER_CACHE = False
 CMS_PLUGIN_CACHE = False
+
+#Logging
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'console': {
+            'class': 'logging.StreamHandler',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console'],
+            'level': os.getenv('DJANGO_LOG_LEVEL', 'INFO'),
+        },
+    },
+}

@@ -7,16 +7,17 @@
 
 {% block content %}
 {% header "methodologie" %}
-<section class="d-none d-md-block container-fluid s-classic-vs-agile">
+<section class="container-fluid s-classic-vs-agile">
   {% section_title "b-section-title--grey" "Comparaison avec la méthode classique" %}
   <div class="row justify-content-center">
-    <div class="col-6">
-      <p class="text-center">
+    <div class="col-md-6 col-12">
+      <p class="p-2 text-justify">
         Les méthodes agiles ont été créées pour pallier les défauts des méthodes dites classiques (Cycle en V, Cascade...) très performantes dans l'industrie, mais inadaptées aux projets numériques. En effet ces derniers possèdent un niveau de complexité et de diversité qui nécessite l'utilisation de méthodes adaptées pour garantir l'avancement du projet, et la qualité de la production. Ainsi une bonne manière d'introduire ces méthodes est de les comparer aux anciennes.
       </p>
     </div>
   </div>
 
+<div class="d-none d-md-block">
   <div class="row justify-content-center">
     <div class="col-auto">
       <div class="b-h2">
@@ -56,7 +57,7 @@
       <div class="col-5 p-1 p-xl-3 s-classic-vs-agile__col--good">
         <div data-aos-duration=500 data-aos="fade-left" class="w-xl-50 w-75 mx-auto b-comparison-item">
           <h3 class="b-comparison-item__title text-center p-2">L'essentiel est construit en priorité</h3>
-              <p class="b-comparison-item__text my-4"><i class="float-left fas fa-th fa-4x mr-4 mb-2"></i>Les méthodes agiles découpent le projet en petites fonctionnalités indépendantes, auxquelles sont associés une difficulté et une valeur ajouté pour l'objectif à atteindre (vendre des articles, promouvoir un service...). Ainsi il est facile de prioriser leur développement de manière à construire d'abord le produit répondant vraiment au besoin du  client. On peut ensuite décider ou non d'inclure les fonctionnalités plus secondaires en fonction de l'évolution du projet.</p>
+              <p class="b-comparison-item__text my-4"><i class="float-left fas fa-th fa-4x mr-4 mb-2"></i>Les méthodes agiles découpent le projet en petites fonctionnalités indépendantes, auxquelles sont associées une difficulté et une valeur ajoutée pour l'objectif à atteindre (vendre des articles, promouvoir un service...). Ainsi il est facile de prioriser leur développement de manière à construire d'abord le produit répondant vraiment au besoin du  client. On peut ensuite décider ou non d'inclure les fonctionnalités plus secondaires en fonction de l'évolution du projet.</p>
        </div>
       </div>
     </div>
@@ -77,9 +78,8 @@
 
 
   </div>
-</section>
-
-<section id="sClassicVsAgileCarousel" class="d-md-none carousel slide s-classic-vs-agile-carousel"  data-ride="false">
+</div>
+<div id="sClassicVsAgileCarousel" class="d-md-none carousel slide s-classic-vs-agile-carousel"  data-ride="false">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <div class="row p-3 justify-content-center">
@@ -160,7 +160,10 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+</div>
 </section>
+
+
 
     <section class="mt-5 pb-4 b-agile-workflow">
       {% section_title "" "La méthode SCRUM" %}

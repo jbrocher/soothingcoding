@@ -5,6 +5,13 @@
 <!doctype html>
 <html>
     <head>
+
+        {% for snippet in request.current_page.snippetextension.snippets.all %}
+
+          {{snippet.code | safe}}
+
+        {% endfor %}
+
         <title>{% block title %}{% page_attribute "page_title" %}{% endblock title %}</title>
 
         <meta charset="utf-8">

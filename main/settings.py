@@ -181,6 +181,7 @@ INSTALLED_APPS = (
     'main',
     'contact_form',
     'pipeline',
+    'snippets',
 
 
 )

@@ -5,7 +5,7 @@ from .models import SnippetExtension, Snippet
 
 
 class SnippetExtensionAdmin(PageExtensionAdmin):
-    fields = ('name', 'snippets')
+    fields = ('snippets',)
 admin.site.register(SnippetExtension, SnippetExtensionAdmin)
 
 

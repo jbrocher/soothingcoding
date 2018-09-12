@@ -13,10 +13,13 @@
         {% endfor %}
 
         <title>{% block title %}{% page_attribute "page_title" %}{% endblock title %}</title>
+
         <meta name="description" content="{% page_attribute "meta_description" %}">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         {% block metadesc %}{% endblock %}
+        <link rel='shortcut icon' type='image/png' href='{% static "img/favicon.ico" %}' />
+
         <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
         <!-- Bootstrap core CSS -->
         <link href="{% static "vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">

@@ -1,4 +1,11 @@
 .b-footer__container {
   background-color: black;
-  height: 50px;
+  position:relative;
+  min-height: 36px;
+}
+
+.b-footer__text-container {
+  position:absolute;
+  top:50%;
+  margin-top:-12px;
 }
